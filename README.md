@@ -11,10 +11,11 @@ Automatically crawl data from HIT websites
 
 ## How to install
 
-1. Install Ruby 2.1.2 or greater using either [rbenv](http://octopress.org/docs/setup/rbenv) or [RVM](http://octopress.org/docs/setup/rvm)
-2. `gem install bundler`
-3. `rbenv rehash` # If you use rbenv, rehash to be able to run the bundle command
-4. `bundle install`
+1. Install either MySQL or libmysqlclient-dev
+2. Install Ruby 2.1.2 or greater using either [rbenv](http://octopress.org/docs/setup/rbenv) or [RVM](http://octopress.org/docs/setup/rvm)
+3. `gem install bundler`
+4. `rbenv rehash` # If you use rbenv, rehash to be able to run the bundle command
+5. `bundle install`
 
 ## License
 MIT License
