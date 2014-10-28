@@ -3,9 +3,7 @@ require 'mechanize'
 require 'open-uri'
 require './HTMLNodeParser.rb'
 require './NewsObject.rb'
-# A example of crawling down sme.hit.edu.cn
-# 学院新闻 http://sme.hit.edu.cn/news/main.asp?cataid=A00010003
-# Encoding: GB2312
+
 main_thread = Mechanize.new
 minion_thread = Mechanize.new
 news_index = main_thread.get('http://cs.hit.edu.cn/?q=notice')
