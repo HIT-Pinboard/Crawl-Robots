@@ -13,7 +13,7 @@ base_url = 'http://cs.hit.edu.cn/'
 should_stop = false
 stop_index = 0
 stop_link = nil
-filePath = 'cs.hit.edu.cn/news/last_update.json'
+filePath = 'cs.hit.edu.cn/cs_news_last_update.json'
 if File.exist?filePath
 	file = File.read(filePath, :encoding => 'UTF-8')
 	last_update = JSON.parse(file)
@@ -38,6 +38,12 @@ while !should_stop do
 		parser = ACHTMLNodeParser.new(doc.xpath('//*[@id="'+cell.search('a')[0]["href"][4...8]+'-'+cell.search('a')[0]["href"][9...13]+'"]/div[2]/div[1]/div/div'), base_url)
 		parser.parse
 		news_date = news_date.delete(' ').gsub('年', '-').gsub('月', '-').gsub('日', ' ')+ DateTime.now.to_time.to_s.split(' ')[1] +' ' + DateTime.now.to_time.to_s.split(' ')[1]
+		if (news_date[6]=='-')
+			news_date[5,0]='0'
+		end
+		if (news_date[9]==' ')
+			news_date[8,0]='0'
+		end
 		news_title = news_title.gsub('/', '-')
 		obj = {
 			"title" => news_title,
