@@ -113,6 +113,8 @@ class PBBaseFetcher
 			end
 		end
 
+		conn.close
+
 		# Incrementally Update Write
 		last_update[base][tag] = {
 			"date" => Time.now.to_time.to_s[0..-7],
