@@ -8,10 +8,11 @@ class PBNewsObject
 	def initialize(object, website, tag)
 		@object = object
 		@website = website
-		@tags = [tag]
+		@tag = tag
 	end
 
-	def save
+	def save(db_conn)
+		@conn = db_conn
 		save_local
 		save_db
 	end
@@ -23,7 +24,7 @@ class PBNewsObject
 
 		@filename = Digest::SHA1.hexdigest(@object["title"]+trim_date)
 		@filePath = @website + '/' + @filename + '.json'
-		@object["tags"] = @tags
+		@object["tag"] = @tag
 		string = JSON.pretty_generate(@object)
 		File.open(@filePath, 'w') { |file|
 			file.write(string)
@@ -32,14 +33,14 @@ class PBNewsObject
 	end
 
 	def save_db
-		conn = PBDBConn.new
 		hash = {
 			"title" => @object["title"],
 			"date" => trim_date,
-			"tags" => @tags,
-			"link" => '/' + @filePath
+			"tag" => @tag,
+			"filePath" => '/' + @filePath,
+			"URL" => @object["link"]
 		}
-		conn.save(hash)
+		@conn.save(hash)
 	end
 
 	def trim_date

@@ -3,6 +3,7 @@ require 'Nokogiri'
 require 'open-uri'
 require './PBHTMLNodeParser.rb'
 require './PBNewsObject.rb'
+require './PBDBConnector.rb'
 
 class PBBaseFetcher
 
@@ -25,9 +26,11 @@ class PBBaseFetcher
 
 	def fetch_core(base, url)
 		config_hash = @config[url]
-		raise "[FATAL]: config file incorrect." if check_config(config_hash)
+		raise "[FATAL]: config file incorrect" if check_config(config_hash)
 		main_thread = Mechanize.new
 		minion_thread = Mechanize.new
+
+		conn = PBDBConn.new
 
 		news_index = main_thread.get(url)
 		news_index.encoding = config_hash["encoding"]
@@ -100,7 +103,7 @@ class PBBaseFetcher
 					"imgs" => parser.imgs
 				}
 				news = PBNewsObject.new(obj, base, tag)
-				news.save
+				news.save(conn)
 
 				stop_index += 1
 			end
