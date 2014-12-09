@@ -1,6 +1,6 @@
 require './PBBaseFetcher.rb'
 
-class SAFetcher < PBBaseFetcher
+class PBGeneralFetcher < PBBaseFetcher
 
 	def title_search(cell)
 		# Subclass and change this

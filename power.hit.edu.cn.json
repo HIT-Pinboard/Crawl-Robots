@@ -1,0 +1,23 @@
+{
+	"website": {
+		"power.hit.edu.cn": [
+			"http://power.hit.edu.cn/news/sub_xyxw.asp?cataid=A00340004", "http://power.hit.edu.cn/news/sub_tzgg.asp?cataid=A00340009"
+		]
+	},
+	"http://power.hit.edu.cn/news/sub_xyxw.asp?cataid=A00340004": {
+		"encoding": "gbk",
+		"tag": "3.1",
+		"news_table": "/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr/td/table[3]/tr",
+		"news_detail_root": "/html/body/table[2]/tbody/tr/td[2]/table[2]/tr[3]",
+		"next_text": "下一页"
+	},
+	"http://power.hit.edu.cn/news/sub_tzgg.asp?cataid=A00340009": {
+		"encoding": "gbk",
+		"tag": "3.2",
+		"news_table": "/html/body/table[2]/tbody/tr/td[2]/table/tbody/tr/td/table[3]/tr",
+		"news_detail_root": "/html/body/table[2]/tbody/tr/td[2]/table[2]/tr[3]",
+		"next_text": "下一页"
+	},
+	"base_url": "http://power.hit.edu.cn/news/",
+	"last_update_path": "./last_update.json"
+}
