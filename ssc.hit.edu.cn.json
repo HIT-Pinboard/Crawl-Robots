@@ -1,0 +1,30 @@
+{
+	"website": {
+		"ssc.hit.edu.cn": [
+			"http://ssc.hit.edu.cn/news/sub_xyxw.asp?cataid=A00340004", "http://ssc.hit.edu.cn/news/sub_xygg.asp?cataid=A00340009","http://ssc.hit.edu.cn/news/sub_hyjz.asp?cataid=A00340016"
+		]
+	},
+	"http://ssc.hit.edu.cn/news/sub_xyxw.asp?cataid=A00340004": {
+		"encoding": "gbk",
+		"tag": "5.1",
+		"news_table": "/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/table[3]/tr",
+		"news_detail_root": "/html/body/table[3]/tbody/tr/td[2]/table[2]/tr[3]",
+		"next_text": "下一页"
+	},
+	"http://ssc.hit.edu.cn/news/sub_xygg.asp?cataid=A00340009": {
+		"encoding": "gbk",
+		"tag": "5.2",
+		"news_table": "/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/table[3]/tr",
+		"news_detail_root": "/html/body/table[3]/tbody/tr/td[2]/table[2]/tr[3]",
+		"next_text": "下一页"
+	},
+	"http://ssc.hit.edu.cn/news/sub_hyjz.asp?cataid=A00340016": {
+		"encoding": "gbk",
+		"tag": "5.3",
+		"news_table": "/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/table[3]/tr",
+		"news_detail_root": "/html/body/table[3]/tbody/tr/td[2]/table[2]/tr[3]",
+		"next_text": "下一页"
+	},
+	"base_url": "http://ssc.hit.edu.cn/news/",
+	"last_update_path": "./last_update.json"
+}
