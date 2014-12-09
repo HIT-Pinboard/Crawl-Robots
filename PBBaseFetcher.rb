@@ -49,15 +49,10 @@ class PBBaseFetcher
 			puts '[INFO]: new last_update json created'
 		end
 
-		if !last_update.has_key?base
-			last_update[base] = {}
-			puts "[INFO]: new last_update json section: #{base} created"
-		end
-
 		tag = config_hash["tag"]
-		if !last_update[base].has_key?tag
-			last_update[base][tag]= {}
-			puts "[INFO]: new last_update json section: #{base}:#{tag} created"
+		if !last_update.has_key?tag
+			last_update[tag]= {}
+			puts "[INFO]: new last_update json section #{tag} created"
 		end
 
 		while !should_stop do
@@ -72,7 +67,7 @@ class PBBaseFetcher
 					stop_link = news_link
 				end
 
-				if last_update[base][tag]["link"] != nil && news_link == last_update[base][tag]["link"]
+				if last_update[tag]["link"] != nil && news_link == last_update[tag]["link"]
 					should_stop = 1
 					break
 				end
@@ -116,7 +111,7 @@ class PBBaseFetcher
 		conn.close
 
 		# Incrementally Update Write
-		last_update[base][tag] = {
+		last_update[tag] = {
 			"date" => Time.now.to_time.to_s[0..-7],
 			"link" => stop_link,
 			"count" => stop_index
