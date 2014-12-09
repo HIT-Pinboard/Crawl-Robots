@@ -46,13 +46,18 @@ class PBNewsObject
 	def trim_date
 		object_date = @object["date"]
 
-		date_year = object_date.split(' ').first.split('-')[0].to_i
-		date_month = object_date.split(' ').first.split('-')[1].to_i
-		date_day = object_date.split(' ').first.split('-')[2].to_i
-		date_hour = object_date.split(' ').last.split('-')[0].to_i
-		date_minite = object_date.split(' ').last.split('-')[1].to_i
-		date_second = object_date.split(' ').last.split('-')[2].to_i
-
+		date_year = object_date.split(/\/|-|:|\s/)[0].to_i
+		date_month = object_date.split(/\/|-|:|\s/)[1].to_i
+		date_day = object_date.split(/\/|-|:|\s/)[2].to_i
+		if object_date.object_date.split(/\/|-|:|\s/).count < 6
+			date_hour = 10
+			date_minite = 0
+			date_second = 0
+		else
+			date_hour = object_date.split(/\/|-|:|\s/)[3].to_i
+			date_minite = object_date.split(/\/|-|:|\s/)[4].to_i
+			date_second = object_date.split(/\/|-|:|\s/)[5].to_i
+		end
 		format('%04d-%02d-%02d %02d:%02d:%02d', date_year, date_month, date_day, date_hour, date_minite, date_second)
 	end
 

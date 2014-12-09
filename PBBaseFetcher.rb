@@ -92,9 +92,6 @@ class PBBaseFetcher
 				parser = PBHTMLNodeParser.new(doc.xpath(config_hash["news_detail_root"]), base_url)
 				parser.parse
 
-				# Trim Date
-				news_date = news_date.gsub('/', '-')
-
 				obj = {
 					"title" => news_title,
 					"link" => news_link,

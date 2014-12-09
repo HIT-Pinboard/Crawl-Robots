@@ -14,7 +14,7 @@ class SAFetcher < PBBaseFetcher
 
 	def date_search(cell)
 		# Subclass and change this
-		cell.search('td[2]//a')[1]['title']
+		cell.search('td[2]//a')[1]['title'].gsub('/', '-')
 	end
 
 	private :check_config, :fetch_core, :title_search, :link_search, :date_search
