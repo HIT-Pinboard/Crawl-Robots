@@ -12,18 +12,18 @@ class PBDBConn
 		end
 		raise "[FATAL]: db config file incorrect" if !check_config(@conf)
 		@conn = Mysql.new(@conf["db_address"], @conf["db_username"], @conf["db_password"], @conf["db_database"])
-		@conn.query("CREATE TABLE IF NOT EXISTS PDB(Time VARCHAR(200),Title NVARCHAR(200),FilePath NVARCHAR(300),Tag VARCHAR(15),URL VARCHAR(100),PRIMARY KEY(Tag,URL));")
+		@conn.query("CREATE TABLE IF NOT EXISTS PDB(Date VARCHAR(200),Title NVARCHAR(200),Filepath NVARCHAR(300),Tag VARCHAR(15),Link VARCHAR(100),PRIMARY KEY(Tag,Link));")
 		@conn.query("CREATE TABLE IF NOT EXISTS UserInfo(UUID VARCHAR(64),UserTags VARCHAR(30),PRIMARY KEY(UUID,UserTags));")
 	end
 
 	def save(hash)
-		sql = "INSERT INTO PDB (Time,Title,FilePath,Tag,URL) VALUES (?, ?, ?, ?, ?)"
+		sql = "INSERT INTO PDB (Date,Title,FilePath,Tag,Link) VALUES (?, ?, ?, ?, ?)"
 		st = @conn.prepare(sql)
-		st.execute(hash["date"], hash["title"], hash["filePath"], hash["tag"], hash["URL"])
+		st.execute(hash["date"], hash["title"], hash["filepath"], hash["tag"], hash["link"])
 	end
 
 	def getNewsListAll(m, n)
-		sql = "SELECT * FROM PDB ORDER BY TIME DESC LIMIT ?,?"
+		sql = "SELECT * FROM PDB ORDER BY Date DESC LIMIT ?,?"
 		st = @conn.prepare(sql)
 		Stmt.new(st.execute(m, n))
     end
@@ -33,7 +33,7 @@ class PBDBConn
     	tags.count.times {
     		stmt << 'Tag = ?'
     	}
-    	sql = "SELECT * FROM PDB WHERE #{stmt.join(' OR ')} ORDER BY TIME DESC LIMIT ?,?;"
+    	sql = "SELECT * FROM PDB WHERE #{stmt.join(' OR ')} ORDER BY Date DESC LIMIT ?,?;"
     	st = @conn.prepare(sql)
     	Stmt.new(st.execute(*tags, m, n))
     end

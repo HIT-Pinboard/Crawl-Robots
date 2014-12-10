@@ -23,10 +23,10 @@ class PBNewsObject
 		end
 
 		@filename = Digest::SHA1.hexdigest(@object["title"]+trim_date)
-		@filePath = @website + '/' + @filename + '.json'
+		@filepath = @website + '/' + @filename + '.json'
 		@object["tag"] = @tag
 		string = JSON.pretty_generate(@object)
-		File.open(@filePath, 'w') { |file|
+		File.open(@filepath, 'w') { |file|
 			file.write(string)
 			puts "[INFO]: #{@filename} write to disk"
 		}
@@ -37,8 +37,8 @@ class PBNewsObject
 			"title" => @object["title"],
 			"date" => trim_date,
 			"tag" => @tag,
-			"filePath" => '/' + @filePath,
-			"URL" => @object["link"]
+			"filepath" => '/' + @filepath,
+			"link" => @object["link"]
 		}
 		@conn.save(hash)
 	end
