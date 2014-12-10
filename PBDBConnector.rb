@@ -23,40 +23,46 @@ class PBDBConn
 	end
 
 	def getNewsListAll(m,n)
-		sql = "SELECT * FROM PDB ORDER BY TIME DESC LIMIT ? ?"
+		sql = "SELECT * FROM PDB ORDER BY TIME DESC LIMIT ?,?"
 		st = @conn.prepare(sql)
-		st.execute(m, n)
+		Stmt.new(st.execute(m, n))
     end
 
     def getNewsList(tags,m,n)
-    	#generating where clause according to tags
-    	#string to float.float to string??
-    	tag=tags[0]
-    	where_clause="Tag = #{tag}"
-    	1.upto(tags.length-1){ |i|
-    		tag=tags[i]
-    		where_clause=where_clause+" or Tag = #{tag}"	
+    	# #generating where clause according to tags
+    	# #string to float.float to string??
+    	# tag=tags[0]
+    	# where_clause="Tag = #{tag}"
+    	# 1.upto(tags.length-1){ |i|
+    	# 	tag=tags[i]
+    	# 	where_clause=where_clause+" or Tag = #{tag}"	
+    	# }
+    	stmt = []
+    	tags.count.times {
+    		stmt << 'Tag = ?'
     	}
-		@conn.query("SELECT * FROM PDB WHERE #{where_clause} ORDER BY TIME DESC LIMIT #{m},#{n};")
+    	sql = "SELECT * FROM PDB WHERE #{stmt.join(' OR ')} ORDER BY TIME DESC LIMIT ?,?;"
+    	st = @conn.prepare(sql)
+    	Stmt.new(st.execute(*tags, m, n))
     end
     
-    def updateID(ID,tags)
-    	if ID.length == 64
+    def updateID(uuid,tags)
+    	if uuid.length == 64
     		tag = tags.join(',')
 			sql = "INSERT INTO UserInfo (UserID, UserTags) VALUES (?, ?)"
 			st = @conn.prepare(sql)
-			st.execute(ID, tag)
+			st.execute(uuid, tag)
 		else
 			raise "[FATAL]: UserID is not 64 bytes"
 		end
     end
 
-    def removeID(ID)
+    def removeID(uuid)
     	#protection
-    	if ID.length == 64
+    	if uuid.length == 64
     		sql = "DELETE FROM UserInfo WHERE UserID = ?"
 			st = @conn.prepare(sql)
-			st.execute(ID)
+			st.execute(uuid)
     	else
     		raise "[FATAL]: UserID is not 64 bytes"
     	end
@@ -79,4 +85,27 @@ class PBDBConn
 	end
 
 	private :check_config
+end
+
+
+# http://stackoverflow.com/questions/17083383/fetch-mysql-prepared-statement-as-array-of-hashes
+class Stmt
+	def each_hash
+		fields = @target.result_metadata.fetch_fields.map do |f| f.name end 
+		@target.each do |x| 
+			hash = {}
+			fields.zip(x).each do |pair|
+				hash[pair[0]] = pair[1]
+			end 
+			yield hash
+		end 
+	end 
+
+	def initialize(target)
+		@target = target
+	end 
+
+	def method_missing(name, *args, &block)
+		@target.send(name, *args, &block)
+	end 
 end
