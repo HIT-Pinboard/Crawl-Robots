@@ -9,13 +9,13 @@ start_hour = 8
 end_hour = 22
 
 while true
-	
+
 	if Time.now.hour.between?(start_hour, end_hour)
 		fetcher = PBGeneralFetcher.new("./sme.hit.edu.cn.json")
 		fetcher.fetch
 
-		#fetcher = PBGeneralFetcher.new("./sa.hit.edu.cn.json")
-		#fetcher.fetch
+		fetcher = PBGeneralFetcher.new("./sa.hit.edu.cn.json")
+		fetcher.fetch
 
 		fetcher = PBGeneralFetcher.new("./power.hit.edu.cn.json")
 		fetcher.fetch
