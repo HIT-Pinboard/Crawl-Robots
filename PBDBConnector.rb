@@ -17,9 +17,9 @@ class PBDBConn
 	end
 
 	def save(hash)
-		sql = "INSERT INTO PDB (Title,Time,Tag,FilePath,URL) VALUES (?, ?, ?, ?, ?)"
+		sql = "INSERT INTO PDB (Time,Title,FilePath,Tag,URL) VALUES (?, ?, ?, ?, ?)"
 		st = @conn.prepare(sql)
-		st.execute(hash["title"], hash["date"], hash["tag"], hash["filePath"], hash["URL"])
+		st.execute(hash["date"], hash["title"], hash["filePath"], hash["tag"], hash["URL"])
 	end
 
 	def getTagsList
