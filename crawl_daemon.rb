@@ -14,8 +14,8 @@ while true
 		fetcher = PBGeneralFetcher.new("./sme.hit.edu.cn.json")
 		fetcher.fetch
 
-		fetcher = PBGeneralFetcher.new("./sa.hit.edu.cn.json")
-		fetcher.fetch
+		#fetcher = PBGeneralFetcher.new("./sa.hit.edu.cn.json")
+		#fetcher.fetch
 
 		fetcher = PBGeneralFetcher.new("./power.hit.edu.cn.json")
 		fetcher.fetch
@@ -38,6 +38,6 @@ while true
 		pushController = PBPushController.new
 		pushController.check_update
 	end
-
+	puts "[INFO] main thread go to sleep #{interval}"
 	sleep(interval)
 end

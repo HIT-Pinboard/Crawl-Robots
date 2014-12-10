@@ -24,7 +24,7 @@ class PBNewsObject
 
 		@filename = Digest::SHA1.hexdigest(@object["title"]+trim_date)
 		@filepath = @website + '/' + @filename + '.json'
-		@object["tag"] = @tag
+		@object["tags"] = [@tag]
 		string = JSON.pretty_generate(@object)
 		File.open(@filepath, 'w') { |file|
 			file.write(string)
@@ -49,7 +49,7 @@ class PBNewsObject
 		date_year = object_date.split(/\/|-|:|\s/)[0].to_i
 		date_month = object_date.split(/\/|-|:|\s/)[1].to_i
 		date_day = object_date.split(/\/|-|:|\s/)[2].to_i
-		if object_date.object_date.split(/\/|-|:|\s/).count < 6
+		if object_date.split(/\/|-|:|\s/).count < 6
 			date_hour = 10
 			date_minite = 0
 			date_second = 0

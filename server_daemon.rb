@@ -40,8 +40,8 @@ post '/newsList' do
 		newsArray = []
 		newsList.each_hash { |h|
 			node = {
-				"title" => h["Title"],
-				"link" => '/'+h["Filepath"],
+				"title" => h["Title"].force_encoding('UTF-8'),
+				"link" => h["Filepath"],
 				"tags" => [h["Tag"]],
 				"date" => h["Date"]
 			}

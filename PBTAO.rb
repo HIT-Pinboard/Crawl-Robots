@@ -3,7 +3,7 @@ require 'json'
 
 class PBTAO
 
-	def initialize(taglist_filepath = './tagLists.json')
+	def initialize(taglist_filepath = './tagsList.json')
 		if File.exist?taglist_filepath
 			@tagLists = JSON.parse(open(taglist_filepath).read)
 		else

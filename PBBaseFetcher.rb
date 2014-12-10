@@ -19,6 +19,7 @@ class PBBaseFetcher
 	def fetch
 		@config["website"].each do |key, value|
 			value.each do |akey|
+				puts "[INFO]: #{key} fetcher start"
 				fetch_core(key, akey)
 			end
 		end

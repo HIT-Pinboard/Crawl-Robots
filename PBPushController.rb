@@ -11,37 +11,43 @@ class PBPushController
 			@last_update = JSON.parse(open(conf_filepath).read)
 			@tao = PBTAO.new
 			@conn = PBDBConn.new
+			@apn = Houston::Client.development
 		else
 			raise "[FATAL]: config file not found"
 		end
 	end
 
 	def push(uuid, badge, string)
-		APN = Houston::Client.development
-		APN.certificate = File.read("/path/to/apple_push_notification.pem")
+		@apn.certificate = File.read("/Users/Yifei/Developer/push_cert.pem")
 		notification = Houston::Notification.new(device: uuid)
 		notification.alert = string
 		notification.badge = badge
-		APN.push(notification)
+		@apn.push(notification)
 	end
 
 	def check_update
 		users = @conn.getUsersList
 		users.each_hash do |h|
 			uuid = h["UUID"]
-			UserTags = h["UserTags"].split(',')
+			user_tags = []
+			h["UserTags"].split(',').each do |tag|
+				user_tags += @tao.query(tag)
+			end
+			user_tags = user_tags.uniq
 			shouldSendPush = false
 			content = ""
 			count = 0
-			UserTags.each do |i|
-				# better to have a update bit
-		        if last_update[UserTags[i]]["count"] > 0
+			user_tags.each do |i|
+		        if @last_update[i]["count"] > 0
 		        	shouldSendPush = true
-		        	count += last_update[UserTags[i]]["count"]
-		        	content += tao.full_name(i) + "更新了" + last_update[UserTags[i]]["count"].to_s + "条内容，"
+		        	count += @last_update[i]["count"]
+		        	content += @tao.full_name(i) + "更新了" + @last_update[i]["count"].to_s + "条内容，"
 				end
 			end
 			content += '点击这里阅读。'
+			if content.length > 30
+				content = '您订阅的多个网站有更新了，点击这里阅读。'
+			end
 			if shouldSendPush
 				push(uuid, count, content)
 			end
