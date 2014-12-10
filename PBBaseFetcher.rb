@@ -1,5 +1,5 @@
 require 'mechanize'
-require 'Nokogiri'
+require 'nokogiri'
 require 'open-uri'
 require './PBHTMLNodeParser.rb'
 require './PBNewsObject.rb'

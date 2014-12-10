@@ -1,7 +1,7 @@
 require './PBGeneralFetcher.rb'
 require './PBPushController.rb'
 require 'open-uri'
-require 'Time'
+require 'time'
 
 interval = 3600
 
