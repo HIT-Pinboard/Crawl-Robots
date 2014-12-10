@@ -3,6 +3,7 @@
 require 'sinatra'
 require 'json'
 require './PBDBConnector.rb'
+require './PBTAO.rb'
 
 set :port, 8080
 set :environment, :production
@@ -32,9 +33,14 @@ post '/newsList' do
 		tags = data["tags"]
 		conn = PBDBConn.new
 		if tags.first == "0"
-		    newsList = conn.getNewsListAll(start_index, count)    #no  tag p and c;  
+		    newsList = conn.getNewsListAll(start_index, count) 
         else
-			newsList = conn.getNewsList(tags,start_index,count)    #no  tag p and c;
+        	tao = PBTAO.new
+        	tags_arr = []
+        	tags.each do |tag_value|
+        		tags_arr += tao.query(tag_value)
+        	end
+			newsList = conn.getNewsList(tags_arr.uniq,start_index,count)
 		end
 		i = 0
 		newsArray = []
@@ -83,7 +89,9 @@ post '/push' do
 	case action
 	when "register"
 		conn.removeID(token)
-		conn.updateID(token,tags)
+		if tags && tags.count > 0
+			conn.updateID(token,tags)
+		end
 	when "remove"
 		conn.removeID(token)
 	end
