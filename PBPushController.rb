@@ -16,10 +16,10 @@ class PBPushController
 		end
 	end
 
-	def push(userID, badge, string)
+	def push(uuid, badge, string)
 		APN = Houston::Client.development
 		APN.certificate = File.read("/path/to/apple_push_notification.pem")
-		notification = Houston::Notification.new(device: userID)
+		notification = Houston::Notification.new(device: uuid)
 		notification.alert = string
 		notification.badge = badge
 		APN.push(notification)
@@ -28,24 +28,25 @@ class PBPushController
 	def check_update
 		users = @conn.getUsersList
 		users.each_hash do |h|
-			UserID = h["UserID"]
+			uuid = h["UUID"]
 			UserTags = h["UserTags"].split(',')
-			pushFlag = false
-			pushString = ""
+			shouldSendPush = false
+			content = ""
 			count = 0
 			UserTags.each do |i|
 				# better to have a update bit
 		        if last_update[UserTags[i]]["count"] > 0
-		        	pushFlag = true
+		        	shouldSendPush = true
 		        	count += last_update[UserTags[i]]["count"]
-		        	#pushString in Chinese, change to tao access method
-		        	pushString = pushString + "#{UserTags[i]}" + "gengxinle" + last_update[UserTags[i]]["count"].to_s + "tiao "
+		        	content += tao.full_name(i) + "更新了" + last_update[UserTags[i]]["count"].to_s + "条内容，"
 				end
 			end
-			if pushFlag
-				push(UserID, count, pushString)
+			content += '点击这里阅读。'
+			if shouldSendPush
+				push(uuid, count, content)
 			end
 		end
+		@conn.close
 	end
 
 end

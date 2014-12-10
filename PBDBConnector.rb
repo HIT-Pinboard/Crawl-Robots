@@ -13,7 +13,7 @@ class PBDBConn
 		raise "[FATAL]: db config file incorrect" if !check_config(@conf)
 		@conn = Mysql.new(@conf["db_address"], @conf["db_username"], @conf["db_password"], @conf["db_database"])
 		@conn.query("CREATE TABLE IF NOT EXISTS PDB(Time VARCHAR(200),Title NVARCHAR(200),FilePath NVARCHAR(300),Tag VARCHAR(15),URL VARCHAR(100),PRIMARY KEY(Tag,URL));")
-		@conn.query("CREATE TABLE IF NOT EXISTS UserInfo(UserID VARCHAR(64),UserTags VARCHAR(30),PRIMARY KEY(UserID,UserTags));")
+		@conn.query("CREATE TABLE IF NOT EXISTS UserInfo(UUID VARCHAR(64),UserTags VARCHAR(30),PRIMARY KEY(UUID,UserTags));")
 	end
 
 	def save(hash)
@@ -22,21 +22,13 @@ class PBDBConn
 		st.execute(hash["date"], hash["title"], hash["filePath"], hash["tag"], hash["URL"])
 	end
 
-	def getNewsListAll(m,n)
+	def getNewsListAll(m, n)
 		sql = "SELECT * FROM PDB ORDER BY TIME DESC LIMIT ?,?"
 		st = @conn.prepare(sql)
 		Stmt.new(st.execute(m, n))
     end
 
-    def getNewsList(tags,m,n)
-    	# #generating where clause according to tags
-    	# #string to float.float to string??
-    	# tag=tags[0]
-    	# where_clause="Tag = #{tag}"
-    	# 1.upto(tags.length-1){ |i|
-    	# 	tag=tags[i]
-    	# 	where_clause=where_clause+" or Tag = #{tag}"	
-    	# }
+    def getNewsList(tags, m, n)
     	stmt = []
     	tags.count.times {
     		stmt << 'Tag = ?'
@@ -46,25 +38,24 @@ class PBDBConn
     	Stmt.new(st.execute(*tags, m, n))
     end
     
-    def updateID(uuid,tags)
+    def updateID(uuid, tags)
     	if uuid.length == 64
     		tag = tags.join(',')
-			sql = "INSERT INTO UserInfo (UserID, UserTags) VALUES (?, ?)"
+			sql = "INSERT INTO UserInfo (UUID, UserTags) VALUES (?, ?)"
 			st = @conn.prepare(sql)
 			st.execute(uuid, tag)
 		else
-			raise "[FATAL]: UserID is not 64 bytes"
+			raise "[FATAL]: device uuid is not 64 bits"
 		end
     end
 
     def removeID(uuid)
-    	#protection
     	if uuid.length == 64
-    		sql = "DELETE FROM UserInfo WHERE UserID = ?"
+    		sql = "DELETE FROM UserInfo WHERE UUID = ?"
 			st = @conn.prepare(sql)
 			st.execute(uuid)
     	else
-    		raise "[FATAL]: UserID is not 64 bytes"
+    		raise "[FATAL]: device uuid is not 64 bits"
     	end
     end
     
@@ -88,7 +79,7 @@ class PBDBConn
 end
 
 
-# http://stackoverflow.com/questions/17083383/fetch-mysql-prepared-statement-as-array-of-hashes
+# issue here: http://stackoverflow.com/questions/17083383/fetch-mysql-prepared-statement-as-array-of-hashes
 class Stmt
 	def each_hash
 		fields = @target.result_metadata.fetch_fields.map do |f| f.name end 
