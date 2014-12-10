@@ -90,12 +90,12 @@
 			"value" : "6",
 			"children" :[
 				{
-					"name" : "人文学院 - 新闻",
+					"name" : "人文学院 - 通告",
 					"value" : "6.1",
 					"children" : []
 				},
 				{
-					"name" : "人文学院 - 通告",
+					"name" : "人文学院 - 新闻",
 					"value" : "6.2",
 					"children" : []
 				}]
