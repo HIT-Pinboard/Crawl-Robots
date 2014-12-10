@@ -13,7 +13,7 @@ class PBDBConn
 		raise "[FATAL]: db config file incorrect" if !check_config(@conf)
 		@conn = Mysql.new(@conf["db_address"], @conf["db_username"], @conf["db_password"], @conf["db_database"])
 		@conn.query("CREATE TABLE IF NOT EXISTS PDB(Time VARCHAR(200),Title NVARCHAR(200),FilePath NVARCHAR(300),Tag VARCHAR(15),URL VARCHAR(100),PRIMARY KEY(Tag,URL));")
-		
+		@conn.query("CREATE TABLE IF NOT EXISTS UserInfo(UserID VARCHAR(64),UserTags VARCHAR(30),PRIMARY KEY(UserID,UserTags));")
 	end
 
 	def save(hash)
@@ -22,13 +22,10 @@ class PBDBConn
 		st.execute(hash["date"], hash["title"], hash["filePath"], hash["tag"], hash["URL"])
 	end
 
-	def getTagsList
-		@conn.query("SELECT DISTINCT DeptNum,DeptChn FROM DeptDB")  #int value
-	end
-
 	def getNewsListAll(m,n)
-		#make sure m and n is int??
-		@conn.query("SELECT * FROM PDB ORDER BY TIME DESC LIMIT #{m},#{n};")
+		sql = "SELECT * FROM PDB ORDER BY TIME DESC LIMIT ? ?"
+		st = @conn.prepare(sql)
+		st.execute(m, n)
     end
 
     def getNewsList(tags,m,n)
@@ -43,14 +40,12 @@ class PBDBConn
 		@conn.query("SELECT * FROM PDB WHERE #{where_clause} ORDER BY TIME DESC LIMIT #{m},#{n};")
     end
     
-    #CREATE TABLE IF NOT EXISTS UserInfo(UserID VARCHAR(64),UserTag VARCHAR(30),PRIMARY KEY(UserID,Usertag));
     def updateID(ID,tags)
     	if ID.length == 64
-    		tag = tags[0]
-			1.upto(tags.length-1){ |i|
-				tag = tag +" " + tags[i] 
-			}
-			@conn.query("INSERT INTO UserInfo VALUES(#{ID},#{tag})")
+    		tag = tags.join(',')
+			sql = "INSERT INTO UserInfo (UserID, UserTags) VALUES (?, ?)"
+			st = @conn.prepare(sql)
+			st.execute(ID, tag)
 		else
 			raise "[FATAL]: UserID is not 64 bytes"
 		end
@@ -59,13 +54,15 @@ class PBDBConn
     def removeID(ID)
     	#protection
     	if ID.length == 64
-    		@conn.query("DELETE FROM UserInfo WHERE UserID = #{ID};")
+    		sql = "DELETE FROM UserInfo WHERE UserID = ?"
+			st = @conn.prepare(sql)
+			st.execute(ID)
     	else
     		raise "[FATAL]: UserID is not 64 bytes"
     	end
     end
     
-    def getuserTags
+    def getUsersList
     	@conn.query("SELECT * FROM UserInfo")
     end
 

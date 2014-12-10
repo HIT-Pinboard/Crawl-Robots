@@ -18,34 +18,12 @@ get '/tagsList' do
 	content_type :json
 	#connect to Mysql and get all the tags as a list
 	puts "ask for tagsArray!"
-	mysql_conn=MysqlConn.new
-	tagsList = mysql_conn.getTagsList # 
-	i=0
-	tagsArray = []
-	tagsList.each_hash { |h|
-
-		node = {
-			"name"=>h["DeptChn"].force_encoding("UTF-8"),    #Chinese string
-			"value"=>h["DeptNum"].to_s,
-			"children"=>[
-				{
-					"name"=>h["DeptChn"].force_encoding("UTF-8")+' - '+"新闻",   #Chinese  string
-					"value"=>h["DeptNum"].to_s+".1",
-					"children"=>[]
-					},
-				{
-					"name"=>h["DeptChn"].force_encoding("UTF-8")+' - '+"公告",
-					"value"=>h["DeptNum"].to_s+".2",
-					"children"=>[]	
-					}]
-		}
-		tagsArray[i,0] = [node]
-        i+=1
-	}
-	mysql_conn.close
+	tagsList_path = "./tagsList.json"
+	tagsHash = JSON.parse(open(tagsList_path).read)
+	tagsList = tagsHash["data"]
 	return_message = {
 		"status" => 200,
-		"response" => tagsArray
+		"response" => tagsList
 	}
 	return_message.to_json
 end
@@ -117,9 +95,10 @@ get '/*/*.json' do
 end
 
 post '/push' do
-	token = params["token"]
-	action = params["action"]
-	tags = params["tags"]
+	data = params["data"]
+	token = data["token"]
+	action = data["action"]
+	tags = data["tags"]
 	mysql_conn = PBDBConn.new
 	case action
 	when "register"
@@ -130,7 +109,7 @@ post '/push' do
 		#delete
 		mysql_conn.removeID(token)
 	end
-	conn.close
+	mysql_conn.close
 end
 	
 
