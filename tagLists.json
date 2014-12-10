@@ -1,0 +1,149 @@
+{
+	"data": 
+		[{
+			"name" : "机电学院",
+			"value" : "1",
+			"children" :[
+				{
+					"name" : "机电学院 - 新闻",
+					"value" : "1.1",
+					"children" : []
+				},
+				{
+					"name" : "机电学院 - 通告",
+					"value" : "1.2",
+					"children" : []
+				}]
+		},
+		{
+			"name" : "航天学院",
+			"value" : "2",
+			"children" :[
+				{
+					"name" : "航天学院 - 新闻",
+					"value" : "2.1",
+					"children" : []
+				},
+				{
+					"name" : "航天学院 - 通告",
+					"value" : "2.2",
+					"children" : []
+				},
+				{
+					"name" : "航天学院 - 学术交流",
+					"value" : "2.3",
+					"children" : []
+				}]
+		},
+		{
+			"name" : "能源学院",
+			"value" : "3",
+			"children" :[
+				{
+					"name" : "能源学院 - 新闻",
+					"value" : "3.1",
+					"children" : []
+				},
+				{
+					"name" : "能源学院 - 通告",
+					"value" : "3.2",
+					"children" : []
+				}]
+		},
+		{
+			"name" : "教务处",
+			"value" : "4",
+			"children" :[
+				{
+					"name" : "教务处 - 新闻",
+					"value" : "4.1",
+					"children" : []
+				},
+				{
+					"name" : "教务处 - 通告",
+					"value" : "4.2",
+					"children" : []
+				}]
+		},
+		{
+			"name" : "理学院",
+			"value" : "5",
+			"children" :[
+				{
+					"name" : "理学院 - 新闻",
+					"value" : "5.1",
+					"children" : []
+				},
+				{
+					"name" : "理学院 - 通告",
+					"value" : "5.2",
+					"children" : []
+				},
+				{
+					"name" : "理学院 - 会议讲座",
+					"value" : "5.3",
+					"children" : []
+				}]
+		},
+		{
+			"name" : "人文学院",
+			"value" : "6",
+			"children" :[
+				{
+					"name" : "人文学院 - 新闻",
+					"value" : "6.1",
+					"children" : []
+				},
+				{
+					"name" : "人文学院 - 通告",
+					"value" : "6.2",
+					"children" : []
+				}]
+		},
+		{
+			"name" : "交通学院",
+			"value" : "7",
+			"children" :[
+				{
+					"name" : "交通学院 - 新闻",
+					"value" : "7.1",
+					"children" : []
+				},
+				{
+					"name" : "交通学院 - 通告",
+					"value" : "7.2",
+					"children" : []
+				},
+				{
+					"name" : "交通学院 - 就业",
+					"value" : "7.3",
+					"children" : []
+				}]
+		},
+
+		{
+			"name" : "化工学院",
+			"value" : "8",
+			"children" :[
+				{
+					"name" : "化工学院 - 通告",
+					"value" : "8.1",
+					"children" : []
+				},
+				{
+					"name" : "化工学院 - 学术信息",
+					"value" : "8.2",
+					"children" : []
+				},
+				{
+					"name" : "化工学院 - 就业",
+					"value" : "8.3",
+					"children" : []
+				},
+				{
+					"name" : "化工学院 - 学生活动",
+					"value" : "8.4",
+					"children" : []
+				}]
+		}]
+}
