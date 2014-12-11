@@ -10,7 +10,7 @@
 					"children" : []
 				},
 				{
-					"name" : "机电学院 - 通告",
+					"name" : "机电学院 - 通知公告",
 					"value" : "1.2",
 					"children" : []
 				}]
@@ -20,12 +20,12 @@
 			"value" : "2",
 			"children" :[
 				{
-					"name" : "航天学院 - 新闻",
+					"name" : "航天学院 - 新闻资讯",
 					"value" : "2.1",
 					"children" : []
 				},
 				{
-					"name" : "航天学院 - 通告",
+					"name" : "航天学院 - 通知公告",
 					"value" : "2.2",
 					"children" : []
 				},
@@ -45,7 +45,7 @@
 					"children" : []
 				},
 				{
-					"name" : "能源学院 - 通告",
+					"name" : "能源学院 - 通知公告",
 					"value" : "3.2",
 					"children" : []
 				}]
@@ -55,12 +55,12 @@
 			"value" : "4",
 			"children" :[
 				{
-					"name" : "教务处 - 新闻",
+					"name" : "教务处 - 新闻动态",
 					"value" : "4.1",
 					"children" : []
 				},
 				{
-					"name" : "教务处 - 通告",
+					"name" : "教务处 - 通知公告",
 					"value" : "4.2",
 					"children" : []
 				}]
@@ -75,7 +75,7 @@
 					"children" : []
 				},
 				{
-					"name" : "理学院 - 通告",
+					"name" : "理学院 - 公告",
 					"value" : "5.2",
 					"children" : []
 				},
@@ -90,7 +90,7 @@
 			"value" : "6",
 			"children" :[
 				{
-					"name" : "人文学院 - 通告",
+					"name" : "人文学院 - 最新通告",
 					"value" : "6.1",
 					"children" : []
 				},
@@ -110,12 +110,12 @@
 					"children" : []
 				},
 				{
-					"name" : "交通学院 - 通告",
+					"name" : "交通学院 - 通知公告",
 					"value" : "7.2",
 					"children" : []
 				},
 				{
-					"name" : "交通学院 - 就业",
+					"name" : "交通学院 - 就业信息",
 					"value" : "7.3",
 					"children" : []
 				}]
@@ -125,7 +125,7 @@
 			"value" : "8",
 			"children" :[
 				{
-					"name" : "化工学院 - 通告",
+					"name" : "化工学院 - 通知公告",
 					"value" : "8.1",
 					"children" : []
 				},
@@ -135,7 +135,7 @@
 					"children" : []
 				},
 				{
-					"name" : "化工学院 - 就业",
+					"name" : "化工学院 - 就业信息",
 					"value" : "8.3",
 					"children" : []
 				},
@@ -150,7 +150,7 @@
 			"value" : "9",
 			"children" :[
 				{
-					"name" : "计算机学院 - 通告",
+					"name" : "计算机学院 - 公告",
 					"value" : "9.1",
 					"children" : []
 				},
@@ -166,7 +166,7 @@
 			"value" : "10",
 			"children" :[
 				{
-					"name" : "材料学院 - 通告",
+					"name" : "材料学院 - 公告",
 					"value" : "10.1",
 					"children" : []
 				},
@@ -182,12 +182,12 @@
 			"value" : "11",
 			"children" :[
 				{
-					"name" : "教务处 - 信息动态",
+					"name" : "财务处 - 信息动态",
 					"value" : "11.1",
 					"children" : []
 				},
 				{
-					"name" : "教务处 - 信息公告",
+					"name" : "财务处 - 信息公告",
 					"value" : "11.2",
 					"children" : []
 				}]
