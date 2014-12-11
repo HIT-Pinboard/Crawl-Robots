@@ -43,6 +43,12 @@ while true
 		fetcher = CSNewsFetcher.new("./cs.hit.edu.cn_news.json")
 		fetcher.fetch
 		
+		fetcher = PBGeneralFetcher.new("./mse.hit.edu.cn.json")
+		fetcher.fetch
+
+		fetcher = PBGeneralFetcher.new("./cwc.hit.edu.cn.json")
+		fetcher.fetch
+
 		pushController = PBPushController.new
 		pushController.check_update
 

@@ -6,16 +6,16 @@
 	},
 	"http://cwc.hit.edu.cn/news/main.asp?cataid=A0001": {
 		"encoding": "gbk",
-		"tag": "4.1",
+		"tag": "11.1",
 		"news_table": "/html/body/table[4]/tr/td[2]/table/tr[2]/td/table/tbody/tr/td/table/tr/td/table/tr",
-		"news_detail_root": "//*[@id=\"zoom\"]",
+		"news_detail_root": "/html/body/table[4]/tr/td[1]/table[2]/tbody/tr/td/table/tr[2]/td",
 		"next_text": "下一页"
 	},
 	"http://cwc.hit.edu.cn/news/main.asp?cataid=A0012": {
 		"encoding": "gbk",
-		"tag": "4.2",
+		"tag": "11.2",
 		"news_table": "/html/body/table[4]/tr/td[2]/table/tr[2]/td/table/tbody/tr/td/table/tr/td/table/tr",
-		"news_detail_root": "//*[@id=\"zoom\"]",
+		"news_detail_root": "/html/body/table[4]/tr/td[1]/table[2]/tbody/tr/td/table/tr[2]/td",
 		"next_text": "下一页"
 	},
 	"base_url": "http://cwc.hit.edu.cn/news/",

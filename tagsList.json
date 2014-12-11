@@ -150,7 +150,7 @@
 			"value" : "9",
 			"children" :[
 				{
-					"name" : "计算机学院 - 公告",
+					"name" : "计算机学院 - 通告",
 					"value" : "9.1",
 					"children" : []
 				},
@@ -160,5 +160,36 @@
 					"children" : []
 				}
 			]	
+		},
+		{
+			"name" : "材料学院",
+			"value" : "10",
+			"children" :[
+				{
+					"name" : "材料学院 - 通告",
+					"value" : "10.1",
+					"children" : []
+				},
+				{
+					"name" : "材料学院 - 新闻",
+					"value" : "10.2",
+					"children" : []
+				}
+			]	
+		},
+		{
+			"name" : " 财务处",
+			"value" : "11",
+			"children" :[
+				{
+					"name" : "教务处 - 信息动态",
+					"value" : "11.1",
+					"children" : []
+				},
+				{
+					"name" : "教务处 - 信息公告",
+					"value" : "11.2",
+					"children" : []
+				}]
 		}]
 }
