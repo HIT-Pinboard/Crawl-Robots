@@ -120,7 +120,6 @@
 					"children" : []
 				}]
 		},
-
 		{
 			"name" : "化工学院",
 			"value" : "8",
@@ -145,5 +144,21 @@
 					"value" : "8.4",
 					"children" : []
 				}]
+		},
+		{
+			"name" : "计算机学院",
+			"value" : "9",
+			"children" :[
+				{
+					"name" : "计算机学院 - 公告",
+					"value" : "9.1",
+					"children" : []
+				},
+				{
+					"name" : "计算机学院 - 新闻",
+					"value" : "9.2",
+					"children" : []
+				}
+			]	
 		}]
 }

@@ -85,7 +85,7 @@ class PBBaseFetcher
 
 				doc = Nokogiri::HTML(news_page.body, nil, config_hash["encoding"])
 
-				parser = PBHTMLNodeParser.new(doc.xpath(config_hash["news_detail_root"]), base_url)
+				parser = PBHTMLNodeParser.new(detail_node_selector(doc, config_hash["news_detail_root"], news_page.uri), base_url)
 				parser.parse
 
 				obj = {
@@ -133,6 +133,10 @@ class PBBaseFetcher
 		true
 	end
 
+	def detail_node_selector(doc, string, uri)
+		doc.xpath(string)
+	end
+
 	def title_search(cell)
 		# Subclass and change this
 	end
@@ -145,6 +149,6 @@ class PBBaseFetcher
 		# Subclass and change this
 	end
 
-	private :check_config, :fetch_core, :title_search, :link_search, :date_search
+	private :check_config, :fetch_core, :title_search, :link_search, :date_search, :detail_node_selector
 
 end

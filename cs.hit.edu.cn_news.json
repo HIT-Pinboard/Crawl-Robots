@@ -1,0 +1,16 @@
+{
+	"website": {
+		"cs.hit.edu.cn": [
+			"http://cs.hit.edu.cn/?q=taxonomy/term/48&page=0"
+		]
+	},
+	"http://cs.hit.edu.cn/?q=taxonomy/term/48&page=0": {
+		"encoding": "utf-8",
+		"tag": "9.2",
+		"news_table": "//*[@id=\"block-system-main\"]/div/div/div/div[1]/div",
+		"news_detail_root": "//*[@id=\"node-%@\"]/div[2]/div[1]/div/div",
+		"next_text": "下一页 ›"
+	},
+	"base_url": "http://cs.hit.edu.cn",
+	"last_update_path": "./last_update.json"
+}

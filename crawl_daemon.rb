@@ -1,4 +1,6 @@
 require './PBGeneralFetcher.rb'
+require './CSAnnoFetcher.rb'
+require './CSNewsFetcher.rb'
 require './PBPushController.rb'
 require 'open-uri'
 require 'time'
@@ -35,8 +37,15 @@ while true
 		fetcher = PBGeneralFetcher.new("./chemeng.hit.edu.cn.json")
 		fetcher.fetch
 
+		fetcher = CSAnnoFetcher.new("./cs.hit.edu.cn_anno.json")
+		fetcher.fetch
+
+		fetcher = CSNewsFetcher.new("./cs.hit.edu.cn_news.json")
+		fetcher.fetch
+		
 		pushController = PBPushController.new
 		pushController.check_update
+
 	end
 	puts "[INFO] main thread go to sleep #{interval}"
 	sleep(interval)
