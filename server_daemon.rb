@@ -81,6 +81,7 @@ get '/*/*.json' do
 end
 
 post '/push' do
+    content_type :json
 	data = params["data"]
 	token = data["token"]
 	action = data["action"]
