@@ -9,7 +9,7 @@ set :port, 8080
 set :environment, :production
 
 get '/' do
-	"Hello RESTFul!"
+	redirect '/index.html'
 end
 
 
@@ -96,6 +96,10 @@ post '/push' do
 		conn.removeID(token)
 	end
 	conn.close
+	return_message = {
+		"status" => 200
+	}
+	return_message.to_json
 end
 	
 
