@@ -4,17 +4,17 @@ class CSNewsFetcher < PBBaseFetcher
 
 	def title_search(cell)
 		# Subclass and change this
-		cell.search('a')[0].text.strip
+		cell.search('div/div[1]/div/h2/a').text.strip
 	end
 
 	def link_search(cell, base_url = '')
 		# Subclass and change this
-		base_url + cell.search('a')[0]["href"]
+		base_url + cell.search('div/div[1]/div/h2/a')[0]['href']
 	end
 
 	def date_search(cell)
 		# Subclass and change this
-		text = cell.search('div/div/span/text()').last.text.strip
+		text = cell.search('div/div[1]/div/div/span/text()[2]').text.strip
 		text.delete(' ').gsub('年', '-').gsub('月', '-').gsub('日', ' ')
 	end
 
