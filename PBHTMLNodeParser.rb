@@ -31,15 +31,34 @@ class PBHTMLNodeParser
 			else
 				@imgs << @base_url+node[:src]
 			end
-		when "table"
-			@string += node.to_s.encode('utf-8')
+		when /(table|tr|td)/
+			element = $1.to_s
+			@string += "<#{element}>"
+			iterativeNext(node)
+			@string += "</#{element}>"
 			return
 		when "a"
-			@string += node.to_s.encode('utf-8')
+			@string += '<a'
+			if url = node[:href]
+				@string += ' href="'
+				if url =~ URI::regexp
+					@string += url
+				else
+					@string += @base_url+url
+				end
+				@string += '"'
+			end
+			@string += '>'
+			iterativeNext(node)
+			@string += '</a>'
 			return
 		when "p"
 			@string += '\n'
 		end
+		iterativeNext(node)
+	end
+
+	def iterativeNext(node)
 		node.children.each do |child|
 			iterativePreorder(child)
 		end
