@@ -6,16 +6,14 @@
 	},
 	"http://sme.hit.edu.cn/news/main.asp?cataid=A00010003": {
 		"encoding": "gbk",
-		"tag": "1.1",
+		"tags": ["1.1"],
 		"news_table": "//*[@id=\"container\"]/table/tr/td[2]/table/tr[2]/td/table/tr/td/table[1]/tr",
-		"news_detail_root": "//*[@id=\"container\"]/table/tr/td[2]/table/tr[2]/td/table/tr[2]",
 		"next_text": "下一页"
 	},
 	"http://sme.hit.edu.cn/news/main.asp?cataid=A00010004": {
 		"encoding": "gbk",
-		"tag": "1.2",
+		"tags": ["1.2"],
 		"news_table": "//*[@id=\"container\"]/table/tr/td[2]/table/tr[2]/td/table/tr/td/table[1]/tr",
-		"news_detail_root": "//*[@id=\"container\"]/table/tr/td[2]/table/tr[2]/td/table/tr[2]",
 		"next_text": "下一页"
 	},
 	"base_url": "http://sme.hit.edu.cn/news/",

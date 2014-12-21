@@ -12,36 +12,72 @@ class PBDBConn
 		end
 		raise "[FATAL]: db config file incorrect" if !check_config(@conf)
 		@conn = Mysql.new(@conf["db_address"], @conf["db_username"], @conf["db_password"], @conf["db_database"])
-		@conn.query("CREATE TABLE IF NOT EXISTS PDB(Date VARCHAR(200),Title NVARCHAR(200),Filepath NVARCHAR(300),Tag VARCHAR(15),Link VARCHAR(100),PRIMARY KEY(Tag,Link));")
-		@conn.query("CREATE TABLE IF NOT EXISTS UserInfo(UUID VARCHAR(64),UserTags VARCHAR(30),PRIMARY KEY(UUID,UserTags));")
 	end
 
 	def save(hash)
-		sql = "INSERT INTO PDB (Date,Title,FilePath,Tag,Link) VALUES (?, ?, ?, ?, ?)"
+		sql = "INSERT INTO `NewsObject` (`Title`,`Date`,`Filepath`,`Link`) VALUES (?,?,?,?)"
 		st = @conn.prepare(sql)
-		st.execute(hash["date"], hash["title"], hash["filepath"], hash["tag"], hash["link"])
+		st.execute(hash["title"], hash["date"], hash["filepath"], hash["link"])
+		insert_id = st.insert_id
+		hash["tags"].uniq.each do |tag|
+			sql = "INSERT INTO `Object_Tags` (`ID_News`,`Tag_Value`) VALUES (?,?)"
+			st = @conn.prepare(sql)
+			st.execute(insert_id, tag)
+		end
 	end
 
 	def getNewsListAll(m, n)
-		sql = "SELECT * FROM PDB ORDER BY Date DESC LIMIT ?,?"
+		result = []
+		sql = "SELECT * FROM `NewsObject` ORDER BY `Date` DESC LIMIT ?,?"
 		st = @conn.prepare(sql)
-		Stmt.new(st.execute(m, n))
+		Stmt.new(st.execute(m, n)).each_hash do |ele|
+			id = ele["ID"]
+			hash = ele
+
+			tags = []
+    		sql = "SELECT `Tag_Value` FROM `Object_Tags` WHERE `ID_News` = ?"
+    		st = @conn.prepare(sql)
+    		Stmt.new(st.execute(id)).each_hash do |h|
+    			tags << h["Tag_Value"]
+    		end
+
+    		hash["Tags"] = tags
+    		result << hash
+		end
+		result
     end
 
     def getNewsList(tags, m, n)
-    	stmt = []
-    	tags.count.times {
-    		stmt << 'Tag = ?'
-    	}
-    	sql = "SELECT * FROM PDB WHERE #{stmt.join(' OR ')} ORDER BY Date DESC LIMIT ?,?;"
+    	result = []
+    	sql = "SELECT DISTINCT `NewsObject`.`ID`,`Date` FROM `NewsObject` INNER JOIN `Object_Tags` ON `NewsObject`.`ID` = `Object_Tags`.`ID_News` WHERE #{(['`Tag_Value` = ?'] * tags.count).join(' OR ')} ORDER BY `Date` DESC LIMIT ?,?"
     	st = @conn.prepare(sql)
-    	Stmt.new(st.execute(*tags, m, n))
+    	Stmt.new(st.execute(*tags, m, n)).each_hash do |ele|
+    		id = ele["ID"]
+    		hash = nil
+
+    		sql = "SELECT `Title`,`Date`,`Filepath`,`Link` FROM `NewsObject` WHERE `ID` = ?"
+    		st = @conn.prepare(sql)
+    		Stmt.new(st.execute(id)).each_hash do |h|
+    			hash = h
+    		end
+    		
+    		tags = []
+    		sql = "SELECT `Tag_Value` FROM `Object_Tags` WHERE `ID_News` = ?"
+    		st = @conn.prepare(sql)
+    		Stmt.new(st.execute(id)).each_hash do |h|
+    			tags << h["Tag_Value"]
+    		end
+
+    		hash["Tags"] = tags
+    		result << hash
+    	end
+    	result
     end
     
     def updateID(uuid, tags)
     	if uuid.length == 64
     		tag = tags.join(',')
-			sql = "INSERT INTO UserInfo (UUID, UserTags) VALUES (?, ?)"
+			sql = "INSERT INTO `Subscriber` (`UUID`, `Tags`) VALUES (?, ?)"
 			st = @conn.prepare(sql)
 			st.execute(uuid, tag)
 		else
@@ -51,7 +87,7 @@ class PBDBConn
 
     def removeID(uuid)
     	if uuid.length == 64
-    		sql = "DELETE FROM UserInfo WHERE UUID = ?"
+    		sql = "DELETE FROM `Subscriber` WHERE `UUID` = ?"
 			st = @conn.prepare(sql)
 			st.execute(uuid)
     	else
@@ -60,7 +96,7 @@ class PBDBConn
     end
     
     def getUsersList
-    	@conn.query("SELECT * FROM UserInfo")
+    	@conn.query("SELECT * FROM `Subscriber`")
     end
 
 	def close
@@ -68,11 +104,7 @@ class PBDBConn
 	end
 
 	def check_config(hash)
-		return false if !hash.has_key?"db_address"
-		return false if !hash.has_key?"db_username"
-		return false if !hash.has_key?"db_password"
-		return false if !hash.has_key?"db_database"
-		true
+		hash.has_key?("db_address") && hash.has_key?("db_username") && hash.has_key?("db_password") && hash.has_key?("db_database")
 	end
 
 	private :check_config

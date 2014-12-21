@@ -6,23 +6,20 @@
 	},
 	"http://jtxy.hit.edu.cn/news/main.asp?cataid=A00010003": {
 		"encoding": "gbk",
-		"tag": "7.1",
+		"tags": ["7.1"],
 		"news_table": "//*[@id=\"container\"]/table/tr/td[2]/table/tr[2]/td/table/tr/td/table[1]/tr",
-		"news_detail_root": "//*[@id=\"container\"]/table/tr/td[2]/table/tr[2]/td/table/tr[2]",
 		"next_text": "下一页"
 	},
 	"http://jtxy.hit.edu.cn/news/main.asp?cataid=A00010004": {
 		"encoding": "gbk",
-		"tag": "7.2",
+		"tags": ["7.2"],
 		"news_table": "//*[@id=\"container\"]/table/tr/td[2]/table/tr[2]/td/table/tr/td/table[1]/tr",
-		"news_detail_root": "//*[@id=\"container\"]/table/tr/td[2]/table/tr[2]/td/table/tr[2]",
 		"next_text": "下一页"
 	},
 	"http://jtxy.hit.edu.cn/news/main.asp?cataid=A00180012": {
 		"encoding": "gbk",
-		"tag": "7.3",
+		"tags": ["7.3"],
 		"news_table": "//*[@id=\"container\"]/table/tr/td[2]/table/tr[2]/td/table/tr/td/table[1]/tr",
-		"news_detail_root": "//*[@id=\"container\"]/table/tr/td[2]/table/tr[2]/td/table/tr[2]",
 		"next_text": "下一页"
 	},
 	"base_url": "http://jtxy.hit.edu.cn/news/",

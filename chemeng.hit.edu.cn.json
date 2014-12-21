@@ -6,30 +6,26 @@
 	},
 	"http://chemeng.hit.edu.cn/news/sub_tzgg.asp?cataid=A00340009": {
 		"encoding": "gbk",
-		"tag": "8.1",
+		"tags": ["8.1"],
 		"news_table": "/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/table[3]/tr",
-		"news_detail_root": "/html/body/table[3]/tbody/tr/td[2]/table[2]/tr[3]",
 		"next_text": "下一页"
 	},
 	"http://chemeng.hit.edu.cn/news/sub_xsxx.asp?cataid=A00340012": {
 		"encoding": "gbk",
-		"tag": "8.2",
+		"tags": ["8.2"],
 		"news_table": "/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/table[3]/tr",
-		"news_detail_root": "/html/body/table[3]/tbody/tr/td[2]/table[2]/tr[3]",
 		"next_text": "下一页"
 	},
 	"http://chemeng.hit.edu.cn/news/sub_jyxx.asp?cataid=A00340014": {
 		"encoding": "gbk",
-		"tag": "8.3",
+		"tags": ["8.3"],
 		"news_table": "/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/table[3]/tr",
-		"news_detail_root": "/html/body/table[3]/tbody/tr/td[2]/table[2]/tr[3]",
 		"next_text": "下一页"
 	},
 	"http://chemeng.hit.edu.cn/news/sub_xshd.asp?cataid=A00340013": {
 		"encoding": "gbk",
-		"tag": "8.4",
+		"tags": ["8.4"],
 		"news_table": "/html/body/table[3]/tbody/tr/td[2]/table/tbody/tr/td/table[3]/tr",
-		"news_detail_root": "/html/body/table[3]/tbody/tr/td[2]/table[2]/tr[3]",
 		"next_text": "下一页"
 	},
 	"base_url": "http://chemeng.hit.edu.cn/news/",

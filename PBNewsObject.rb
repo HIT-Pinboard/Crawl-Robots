@@ -5,16 +5,15 @@ require './PBDBConnector.rb'
 
 class PBNewsObject
 
-	def initialize(object, website, tag)
+	def initialize(object, website)
 		@object = object
 		@website = website
-		@tag = tag
 	end
 
 	def save(db_conn)
 		@conn = db_conn
 		save_local
-		save_db
+		save_db 
 	end
 
 	def save_local
@@ -24,7 +23,6 @@ class PBNewsObject
 
 		@filename = Digest::SHA1.hexdigest(@object["title"]+trim_date)
 		@filepath = @website + '/' + @filename + '.json'
-		@object["tags"] = [@tag]
 		string = JSON.pretty_generate(@object)
 		File.open(@filepath, 'w') { |file|
 			file.write(string)
@@ -33,13 +31,9 @@ class PBNewsObject
 	end
 
 	def save_db
-		hash = {
-			"title" => @object["title"],
-			"date" => trim_date,
-			"tag" => @tag,
-			"filepath" => '/' + @filepath,
-			"link" => @object["link"]
-		}
+		hash = @object.dup
+		hash["filepath"] = '/' + @filepath
+		hash["date"] = trim_date
 		@conn.save(hash)
 	end
 

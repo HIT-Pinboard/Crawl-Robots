@@ -6,16 +6,14 @@
 	},
 	"http://mse.hit.edu.cn/news/main.asp?cataid=A00010010": {
 		"encoding": "gbk",
-		"tag": "10.1",
+		"tags": ["10.1"],
 		"news_table": "/html/body/table[3]/tr/td[2]/table/tr[2]/td/table/tbody/tr/td/table/tr/td/table[1]/tr",
-		"news_detail_root": "//*[@id=\"__01\"]/tr[2]/td/table/tr[2]/td",
 		"next_text": "下一页"
 	},
 	"http://mse.hit.edu.cn/news/main.asp?cataid=A00010004": {
 		"encoding": "gbk",
-		"tag": "10.2",
+		"tags": ["10.2"],
 		"news_table": "/html/body/table[3]/tr/td[2]/table/tr[2]/td/table/tbody/tr/td/table/tr/td/table[1]/tr",
-		"news_detail_root": "//*[@id=\"__01\"]/tr[2]/td/table/tr[2]/td",
 		"next_text": "下一页"
 	},
 	"base_url": "http://mse.hit.edu.cn/news/",

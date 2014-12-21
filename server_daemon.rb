@@ -44,11 +44,11 @@ post '/newsList' do
 		end
 		i = 0
 		newsArray = []
-		newsList.each_hash { |h|
+		newsList.each { |h|
 			node = {
 				"title" => h["Title"].force_encoding('UTF-8'),
 				"link" => h["Filepath"],
-				"tags" => [h["Tag"]],
+				"tags" => h["Tags"],
 				"date" => h["Date"]
 			}
 			newsArray[i, 0] = [node]

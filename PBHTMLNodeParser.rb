@@ -23,7 +23,7 @@ class PBHTMLNodeParser
 	def iterativePreorder(node)
 		case node.name
 		when "text"
-			@string += node.text.strip+'\n' if node.text.strip.length != 0
+			@string += node.text.strip if node.text.strip.length != 0
 		when "img"
 			@string += '#!-- Images['+@imgs.count.to_s+'] --!#\n'
 			if node[:src] =~ URI::regexp
@@ -34,6 +34,11 @@ class PBHTMLNodeParser
 		when "table"
 			@string += node.to_s.encode('utf-8')
 			return
+		when "a"
+			@string += node.to_s.encode('utf-8')
+			return
+		when "p"
+			@string += '\n'
 		end
 		node.children.each do |child|
 			iterativePreorder(child)
