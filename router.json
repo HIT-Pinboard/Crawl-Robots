@@ -1,6 +1,8 @@
 {
 	"http://today.hit.edu.cn/news/\\d{4}/\\d{2}-\\d{2}/.*": {
-		"content": "//*[@id=\"text\"]"
+		"content": "//*[@id=\"text\"]",
+		"tags": "//*[@id=\"date\"]/a",
+		"date": "//*[@id=\"date\"]/text()[1]"
 	},
 	"http://sme.hit.edu.cn/news/Show.asp\\?id=\\d+": {
 		"content": "//*[@id=\"container\"]/table/tr/td[2]/table/tr[2]/td/table/tr[2]"
@@ -34,5 +36,8 @@
 	},
 	"http://cs.hit.edu.cn/\\?q=node/\\d+": {
 		"content": "//*[@id=\"node-%@\"]/div[2]/div[1]/div/div"
+	},
+	"http://software.hit.edu.cn/article/show/\\d+.aspx": {
+		"content": "/html/body/div/div[6]/div[1]"
 	}
 }

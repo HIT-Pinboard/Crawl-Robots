@@ -15,6 +15,7 @@ class PBDBConn
 	end
 
 	def save(hash)
+		latest_tag_id = nil
 		sql = "INSERT INTO `NewsObject` (`Title`,`Date`,`Filepath`,`Link`) VALUES (?,?,?,?)"
 		st = @conn.prepare(sql)
 		st.execute(hash["title"], hash["date"], hash["filepath"], hash["link"])
@@ -23,7 +24,9 @@ class PBDBConn
 			sql = "INSERT INTO `Object_Tags` (`ID_News`,`Tag_Value`) VALUES (?,?)"
 			st = @conn.prepare(sql)
 			st.execute(insert_id, tag)
+			latest_tag_id = st.insert_id
 		end
+		latest_tag_id
 	end
 
 	def getNewsListAll(m, n)
@@ -97,6 +100,16 @@ class PBDBConn
     
     def getUsersList
     	@conn.query("SELECT * FROM `Subscriber`")
+    end
+
+    def getTagsCount(tags, last_tag_id)
+    	if tags.count > 0
+	    	sql = "SELECT DISTINCT `ID_News` FROM `Object_Tags` WHERE `ID` > ? AND (#{(['`Tag_Value` = ?'] * tags.count).join(' OR ')})"
+	    	st = @conn.prepare(sql)
+	    	st.execute(last_tag_id, *tags)
+	    	return st.num_rows
+	    end
+	    0
     end
 
 	def close

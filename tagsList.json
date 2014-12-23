@@ -191,5 +191,30 @@
 					"value" : "11.2",
 					"children" : []
 				}]
+		},
+		{
+			"name" : "软件学院",
+			"value" : "12",
+			"children" :[
+				{
+					"name" : "软件学院 - 通知公告",
+					"value" : "12.1",
+					"children" : []
+				},
+				{
+					"name" : "软件学院 - 学院新闻",
+					"value" : "12.2",
+					"children" : []
+				},
+				{
+					"name" : "软件学院 - 毕业设计",
+					"value" : "12.3",
+					"children" : []
+				},
+				{
+					"name" : "软件学院 - 实习就业",
+					"value" : "12.4",
+					"children" : []
+				}]
 		}]
 }

@@ -15,12 +15,16 @@ class PBBaseFetcher
 	end
 
 	def fetch
+		latest_tag_id = nil
 		@config["website"].each do |key, value|
 			value.each do |akey|
 				puts "[INFO]: #{akey} fetcher start"
-				fetch_core(key, akey)
+				if rs = fetch_core(key, akey)
+					latest_tag_id = rs
+				end
 			end
 		end
+		latest_tag_id
 	end
 
 	def fetch_core(base, url)
@@ -32,8 +36,16 @@ class PBBaseFetcher
 
 		conn = PBDBConn.new
 
-		news_index = main_thread.get(url)
-		news_index.encoding = conf_hash["encoding"]
+		begin
+			news_index = main_thread.get(url)
+			news_index.encoding = conf_hash["encoding"]
+		rescue Net::HTTP::Persistent::Error
+			sleep(300)
+			retry
+		rescue Mechanize::ResponseCodeError => e
+			puts "[ERROR]: #{e.inspect}"
+			exit 1
+		end
 
 		base_url = @config["base_url"]
 
@@ -54,6 +66,8 @@ class PBBaseFetcher
 			last_update[url]= {}
 			puts "[INFO]: new last_update json section #{url} created"
 		end
+
+		latest_tag_id = nil
 
 		while !should_stop do
 			table = news_index.search(conf_hash["news_table"])
@@ -78,6 +92,9 @@ class PBBaseFetcher
 				begin
 					news_page = minion_thread.get(news_link);
 					news_page.encoding = conf_hash["encoding"]
+				rescue Net::HTTP::Persistent::Error
+					sleep(300)
+					retry
 				rescue Mechanize::ResponseCodeError => e
 					puts "[ERROR]: #{e.inspect}"
 					next
@@ -95,14 +112,22 @@ class PBBaseFetcher
 				}
 
 				news = PBNewsObject.new(obj, base)
-				news.save(conn)
+				latest_tag_id = news.save(conn)
 
 				stop_index += 1
 			end
 
 			if link = news_index.link_with(:text => conf_hash["next_text"])
-				news_index = link.click
-				news_index.encoding = conf_hash["encoding"]
+				begin
+					news_index = link.click
+					news_index.encoding = conf_hash["encoding"]
+				rescue Net::HTTP::Persistent::Error
+					sleep(300)
+					retry
+				rescue Mechanize::ResponseCodeError => e
+					puts "[ERROR]: #{e.inspect}"
+					exit 1
+				end
 			else
 				break
 			end
@@ -121,6 +146,7 @@ class PBBaseFetcher
 			string = JSON.pretty_generate(last_update)
 			file.write(string)
 		}
+		latest_tag_id
 	end
 
 	def check_config(hash)
@@ -131,6 +157,6 @@ class PBBaseFetcher
 		PBBaseExtractor.new(conf_hash)
 	end
 
-	private :check_config, :get_extractor
+	private :fetch_core ,:check_config, :get_extractor
 
 end

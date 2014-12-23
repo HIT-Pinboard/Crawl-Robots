@@ -133,5 +133,25 @@
     "date": "2014-12-10 19:53:35",
     "link": "http://cwc.hit.edu.cn/news/Show.asp?id=2758",
     "count": 0
+  },
+  "http://software.hit.edu.cn/article/1/1.aspx": {
+    "date": "2014-12-10 19:53:35",
+    "link": "http://software.hit.edu.cn/article/show/2123.aspx",
+    "count": 0
+  },
+  "http://software.hit.edu.cn/article/22/1.aspx": {
+    "date": "2014-12-10 19:53:35",
+    "link": "http://software.hit.edu.cn/article/show/2111.aspx",
+    "count": 0
+  },
+  "http://software.hit.edu.cn/article/60/1.aspx": {
+    "date": "2014-12-10 19:53:35",
+    "link": "http://software.hit.edu.cn/article/show/1279.aspx",
+    "count": 0
+  },
+  "http://software.hit.edu.cn/article/61/1.aspx": {
+    "date": "2014-12-10 19:53:35",
+    "link": "http://software.hit.edu.cn/article/show/2156.aspx",
+    "count": 0
   }
 }

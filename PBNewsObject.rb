@@ -13,7 +13,7 @@ class PBNewsObject
 	def save(db_conn)
 		@conn = db_conn
 		save_local
-		save_db 
+		save_db
 	end
 
 	def save_local
