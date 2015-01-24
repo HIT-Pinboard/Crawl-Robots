@@ -4,6 +4,11 @@
 		"tags": "//*[@id=\"date\"]/a",
 		"date": "//*[@id=\"date\"]/text()[1]"
 	},
+	"http://today.hit.edu.cn/articles/\\d{4}/\\d{2}-\\d{2}/.*": {
+		"content": "//*[@id=\"articleText\"]",
+		"tags": "//*[@id=\"date\"]/a",
+		"date": "//*[@id=\"date\"]/text()[1]"
+	},
 	"http://sme.hit.edu.cn/news/Show.asp\\?id=\\d+": {
 		"content": "//*[@id=\"container\"]/table/tr/td[2]/table/tr[2]/td/table/tr[2]"
 	},
