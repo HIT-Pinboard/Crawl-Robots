@@ -12,7 +12,6 @@ get '/' do
 	redirect '/index.html'
 end
 
-
 get '/tagsList' do
 	content_type :json
 	filepath = "./tagsList.json"
@@ -26,7 +25,9 @@ end
 
 post '/newsList' do
 	content_type :json
-	data = params["data"]
+	payload = JSON.parse(request.body.read)
+	
+	data = payload["data"]
 	start_index =  data["start_index"].to_i
 	count = data["count"].to_i
 	if data.has_key?("tags")
@@ -81,8 +82,10 @@ get '/*/*.json' do
 end
 
 post '/push' do
-    content_type :json
-	data = params["data"]
+	payload = JSON.parse(request.body.read)
+  content_type :json
+
+	data = payload["data"]
 	token = data["token"]
 	action = data["action"]
 	tags = data["tags"]
