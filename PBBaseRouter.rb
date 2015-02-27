@@ -13,6 +13,8 @@ class PBBaseRouter
 	end
 
 	def page=(page)
+		@doc = nil
+		@parser = nil
 		@page = page
 	end
 
@@ -29,15 +31,9 @@ class PBBaseRouter
 	end
 
 	def xpath_hash
-		ret = nil
 		if !@page
-			@conf.each do |key, value|
-				uri_pattern = Regexp.new(key)
-				next if @page.uri.to_s.match(uri_pattern) == nil
-				break ret = value
-			end
+			@conf[@conf.keys.reject { |k| @page.uri.to_s.match(Regexp.new(k)) == nil }.first]
 		end
-		ret
 	end
 
 	def content
