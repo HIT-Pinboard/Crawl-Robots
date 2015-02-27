@@ -131,6 +131,7 @@ class PBBaseFetcher
 			else
 				break
 			end
+			
 		end
 
 		conn.close

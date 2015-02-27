@@ -1,7 +1,7 @@
 require './PBBaseExtractor.rb'
 require './PBGeneralRouter.rb'
 
-class TODAYExtractor < PBBaseExtractor
+class TodayExtractor < PBBaseExtractor
 
 	def title
 		@cell.search('a').text.strip
@@ -12,7 +12,11 @@ class TODAYExtractor < PBBaseExtractor
 	end
 
 	def date
-		@cell.search('a')[0]['href'][6..15]
+		if router.can_parse? && k = router.date
+			k.match(/\d+-\d+-\d+\s\d+:\d+:\d+/)[0]
+		else
+			@cell.children.last.text.match(/\d+-\d+-\d+(\s\d+:\d+:\d+)?/)[0]
+		end
 	end
 
 	def tags
@@ -20,11 +24,15 @@ class TODAYExtractor < PBBaseExtractor
 	end
 
 	def content
-		router.content
+		if router.can_parse?
+			router.content 
+		else
+			"请进入原链接查看本文！"
+		end
 	end
 
 	def imgs
-		router.imgs
+		router.imgs if router.can_parse?
 	end
 
 	def get_router

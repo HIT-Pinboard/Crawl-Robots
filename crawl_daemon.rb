@@ -2,6 +2,7 @@ require './PBGeneralFetcher.rb'
 require './CSAnnoFetcher.rb'
 require './CSNewsFetcher.rb'
 require './SSFetcher.rb'
+require './TodayFetcher.rb'
 require './PBPushController.rb'
 require 'open-uri'
 require 'time'
@@ -82,10 +83,15 @@ while true
 			latest_tag_id = rs
 		end
 
+    fetcher = TodayFetcher.new("./today.hit.edu.cn.json")
+    if rs = fetcher.fetch
+      latest_tag_id = rs
+    end
+
 		pushController = PBPushController.new
 		pushController.check_update(latest_tag_id)
 
 	end
-	puts "[INFO] main thread go to sleep #{interval}"
+	puts "[INFO]: main thread go to sleep #{interval}"
 	sleep(interval)
 end

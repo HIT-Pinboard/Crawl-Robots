@@ -24,13 +24,20 @@ class PBBaseRouter
 		@base_url = base_url
 	end
 
+	def can_parse?
+		xpath_hash != nil
+	end
+
 	def xpath_hash
-		return if !@page
-		@conf.each do |key, value|
-			uri_pattern = Regexp.new(key)
-			next if @page.uri.to_s.match(uri_pattern) == nil
-			break value
+		ret = nil
+		if !@page
+			@conf.each do |key, value|
+				uri_pattern = Regexp.new(key)
+				next if @page.uri.to_s.match(uri_pattern) == nil
+				break ret = value
+			end
 		end
+		ret
 	end
 
 	def content
@@ -54,7 +61,7 @@ class PBBaseRouter
 	end
 
 	def date
-		if node = get_tags_node
+		if node = get_date_node
 			node.text
 		end
 	end

@@ -14,7 +14,11 @@ class PBGeneralRouter < PBBaseRouter
 
 	def get_content_node
 		if content_xpath = xpath_hash["content"]
-			doc.xpath(content_xpath)
+			if content_xpath.is_a? Array
+				content_xpath.map{ |k| doc.xpath(k) }.reject { |k| k.count == 0 }.first
+			else
+				doc.xpath(content_xpath)
+			end
 		end
 	end
 
