@@ -31,7 +31,7 @@ class PBBaseRouter
 	end
 
 	def xpath_hash
-		if !@page
+		if @page
 			@conf[@conf.keys.reject { |k| @page.uri.to_s.match(Regexp.new(k)) == nil }.first]
 		end
 	end
