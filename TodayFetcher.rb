@@ -1,5 +1,5 @@
 require './PBBaseFetcher.rb'
-require './TODAYExtractor.rb'
+require './TodayExtractor.rb'
 
 class TodayFetcher < PBBaseFetcher
 
