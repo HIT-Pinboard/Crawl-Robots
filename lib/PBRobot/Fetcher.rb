@@ -19,7 +19,7 @@ module PBRobot
       @config["website"].each do |host, value|
         value.each do |url|
           puts "[INFO]: #{url} fetcher start"
-          if rs = fetch_core(key, url, &block)
+          if rs = fetch_core(host, url, &block)
             latest_tag_id = rs
           end
         end
@@ -90,7 +90,6 @@ module PBRobot
 
           begin
             news_page = minion_thread.get(news_link);
-            news_page.encoding = conf_hash["encoding"]
           rescue Net::HTTP::Persistent::Error
             sleep(300)
             retry
@@ -110,8 +109,7 @@ module PBRobot
             "tags" => extractor.tags
           }
 
-          news = PBRobot::Object.new(obj, base)
-          latest_tag_id = block.call(news)
+          latest_tag_id = block.call(obj, base)
 
           stop_index += 1
         end

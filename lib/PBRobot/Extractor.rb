@@ -47,7 +47,6 @@ module PBRobot
       if !@router
         @router = get_router
         @router.page=@detail_page
-        @router.encoding=@conf_hash["encoding"]
         @router.base_url=@base_url
       end
       @router

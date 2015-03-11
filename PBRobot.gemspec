@@ -14,10 +14,10 @@ Gem::Specification.new do |s|
   s.license       = 'MIT'
 
   s.files         = `git ls-files -z`.split("\x0")
-  s.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  s.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  s.executables   = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  s.test_files    = s.files.grep(%r{^(test|spec|features)/})
   s.require_paths = ["lib"]
 
-  s.add_runtime_dependency 'mechanize'
-  s.add_runtime_dependency 'nokogiri'
+  s.add_runtime_dependency 'mechanize', '~> 2.7', '>= 2.7.3'
+  s.add_runtime_dependency 'nokogiri', '~> 1.6', '>= 1.6.5'
 end

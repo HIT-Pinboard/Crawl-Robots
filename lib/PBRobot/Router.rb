@@ -20,6 +20,12 @@ module PBRobot
       @page = page
     end
 
+    def encoding
+      if !@encoding
+        xpath_hash["encoding"]
+      end
+    end
+
     def encoding=(encoding = 'utf-8')
       @encoding = encoding
     end
@@ -77,7 +83,7 @@ module PBRobot
     end
     
     def doc
-      @doc = Nokogiri::HTML(@page.body, nil, @encoding) if !@doc
+      @doc = Nokogiri::HTML(@page.body, nil, encoding) if !@doc
       @doc
     end
 
