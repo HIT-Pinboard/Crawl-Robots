@@ -1,0 +1,33 @@
+{
+	"website": {
+		"software.hit.edu.cn": [
+			"http://software.hit.edu.cn/article/1/1.aspx", "http://software.hit.edu.cn/article/22/1.aspx", "http://software.hit.edu.cn/article/60/1.aspx", "http://software.hit.edu.cn/article/61/1.aspx"
+		]
+	},
+	"http://software.hit.edu.cn/article/1/1.aspx": {
+		"encoding": "utf-8",
+		"tags": ["12.1"],
+		"news_table": "/html/body/div/div[6]/ul/li",
+		"next_text": "下一页»"
+	},
+	"http://software.hit.edu.cn/article/22/1.aspx": {
+		"encoding": "utf-8",
+		"tags": ["12.2"],
+		"news_table": "/html/body/div/div[6]/ul/li",
+		"next_text": "下一页»"
+	},
+	"http://software.hit.edu.cn/article/60/1.aspx": {
+		"encoding": "utf-8",
+		"tags": ["12.3"],
+		"news_table": "/html/body/div/div[6]/ul/li",
+		"next_text": "下一页»"
+	},
+	"http://software.hit.edu.cn/article/61/1.aspx": {
+		"encoding": "utf-8",
+		"tags": ["12.4"],
+		"news_table": "/html/body/div/div[6]/ul/li",
+		"next_text": "下一页»"
+	},
+	"base_url": "http://software.hit.edu.cn",
+	"last_update_path": "./last_update.json"
+}

@@ -1,0 +1,1018 @@
+{
+  "http://sme.hit.edu.cn/news/main.asp?cataid=A00010003": {
+    "date": "2015-02-27 11:29:41",
+    "link": "http://sme.hit.edu.cn/news/Show.asp?id=4716",
+    "count": 0
+  },
+  "http://sme.hit.edu.cn/news/main.asp?cataid=A00010004": {
+    "date": "2015-02-27 11:29:41",
+    "link": "http://sme.hit.edu.cn/news/Show.asp?id=4758",
+    "count": 0
+  },
+  "http://sa.hit.edu.cn/news/main.asp?cataid=A00010003": {
+    "date": "2015-02-27 11:29:52",
+    "link": "http://sa.hit.edu.cn/news/Show.asp?id=5116",
+    "count": 0
+  },
+  "http://sa.hit.edu.cn/news/main.asp?cataid=A00010004": {
+    "date": "2015-02-27 11:30:02",
+    "link": "http://sa.hit.edu.cn/news/Show.asp?id=5113",
+    "count": 0
+  },
+  "http://sa.hit.edu.cn/news/main.asp?cataid=A00010006": {
+    "date": "2015-02-27 11:30:02",
+    "link": "http://sa.hit.edu.cn/news/Show.asp?id=5117",
+    "count": 0
+  },
+  "http://power.hit.edu.cn/news/sub_xyxw.asp?cataid=A00340004": {
+    "date": "2015-02-27 11:30:05",
+    "link": "http://power.hit.edu.cn/news/Showxw.asp?id=3458",
+    "count": 0
+  },
+  "http://power.hit.edu.cn/news/sub_tzgg.asp?cataid=A00340009": {
+    "date": "2015-02-27 11:30:06",
+    "link": "http://power.hit.edu.cn/news/Showgg.asp?id=3457",
+    "count": 0
+  },
+  "http://jwc.hit.edu.cn/news/sub_xyxw.asp?cataid=A00340004": {
+    "date": "2015-02-27 11:30:07",
+    "link": "http://jwc.hit.edu.cn/news/Showxw.asp?id=3279",
+    "count": 0
+  },
+  "http://jwc.hit.edu.cn/news/sub_tzgg.asp?cataid=A00340009": {
+    "date": "2015-02-27 11:30:08",
+    "link": "http://jwc.hit.edu.cn/news/Showgg.asp?id=3290",
+    "count": 0
+  },
+  "http://ssc.hit.edu.cn/news/sub_xyxw.asp?cataid=A00340004": {
+    "date": "2015-02-27 11:30:10",
+    "link": "http://ssc.hit.edu.cn/news/Showxw.asp?id=2930",
+    "count": 0
+  },
+  "http://ssc.hit.edu.cn/news/sub_xygg.asp?cataid=A00340009": {
+    "date": "2015-02-27 11:30:11",
+    "link": "http://ssc.hit.edu.cn/news/Showgg.asp?id=2931",
+    "count": 0
+  },
+  "http://ssc.hit.edu.cn/news/sub_hyjz.asp?cataid=A00340016": {
+    "date": "2015-02-27 11:30:11",
+    "link": "http://ssc.hit.edu.cn/news/Showjz.asp?id=2812",
+    "count": 0
+  },
+  "http://rwxy.hit.edu.cn/news/main.asp?cataid=A00010003": {
+    "date": "2015-02-27 11:30:13",
+    "link": "http://rwxy.hit.edu.cn/news/Show.asp?id=4092",
+    "count": 0
+  },
+  "http://rwxy.hit.edu.cn/news/main.asp?cataid=A00010004": {
+    "date": "2015-02-27 11:30:14",
+    "link": "http://rwxy.hit.edu.cn/news/Show.asp?id=4102",
+    "count": 0
+  },
+  "http://jtxy.hit.edu.cn/news/main.asp?cataid=A00010003": {
+    "date": "2015-02-27 11:30:23",
+    "link": "http://jtxy.hit.edu.cn/news/Show.asp?id=4918",
+    "count": 0
+  },
+  "http://jtxy.hit.edu.cn/news/main.asp?cataid=A00010004": {
+    "date": "2015-02-27 11:30:29",
+    "link": "http://jtxy.hit.edu.cn/news/Show.asp?id=4919",
+    "count": 0
+  },
+  "http://jtxy.hit.edu.cn/news/main.asp?cataid=A00180012": {
+    "date": "2015-02-27 11:30:34",
+    "link": "http://jtxy.hit.edu.cn/news/Show.asp?id=4907",
+    "count": 0
+  },
+  "http://chemeng.hit.edu.cn/news/sub_tzgg.asp?cataid=A00340009": {
+    "date": "2015-02-27 11:30:37",
+    "link": "http://chemeng.hit.edu.cn/news/Showgg.asp?id=4202",
+    "count": 0
+  },
+  "http://chemeng.hit.edu.cn/news/sub_xsxx.asp?cataid=A00340012": {
+    "date": "2015-02-27 11:30:40",
+    "link": "http://chemeng.hit.edu.cn/news/Showxs.asp?id=4138",
+    "count": 0
+  },
+  "http://chemeng.hit.edu.cn/news/sub_jyxx.asp?cataid=A00340014": {
+    "date": "2015-02-27 11:30:42",
+    "link": "http://chemeng.hit.edu.cn/news/Showjy.asp?id=4199",
+    "count": 0
+  },
+  "http://chemeng.hit.edu.cn/news/sub_xshd.asp?cataid=A00340013": {
+    "date": "2015-02-27 11:30:43",
+    "link": "http://chemeng.hit.edu.cn/news/Showhd.asp?id=4205",
+    "count": 0
+  },
+  "http://cs.hit.edu.cn/?q=notice&page=0": {
+    "date": "2015-02-27 11:30:45",
+    "link": "http://cs.hit.edu.cn/?q=node/1070",
+    "count": 0
+  },
+  "http://cs.hit.edu.cn/?q=taxonomy/term/48&page=0": {
+    "date": "2015-02-27 11:30:47",
+    "link": "http://cs.hit.edu.cn/?q=node/1067",
+    "count": 0
+  },
+  "http://mse.hit.edu.cn/news/main.asp?cataid=A00010010": {
+    "date": "2015-02-27 11:30:51",
+    "link": "http://mse.hit.edu.cn/news/Show.asp?id=8676",
+    "count": 0
+  },
+  "http://mse.hit.edu.cn/news/main.asp?cataid=A00010004": {
+    "date": "2015-02-27 11:30:52",
+    "link": "http://mse.hit.edu.cn/news/Show.asp?id=8678",
+    "count": 0
+  },
+  "http://cwc.hit.edu.cn/news/main.asp?cataid=A0001": {
+    "date": "2015-02-27 11:30:55",
+    "link": "http://cwc.hit.edu.cn/news/Show.asp?id=2762",
+    "count": 0
+  },
+  "http://cwc.hit.edu.cn/news/main.asp?cataid=A0012": {
+    "date": "2015-02-27 11:30:56",
+    "link": "http://cwc.hit.edu.cn/news/Show.asp?id=2785",
+    "count": 0
+  },
+  "http://software.hit.edu.cn/article/1/1.aspx": {
+    "date": "2015-02-27 11:31:00",
+    "link": "http://software.hit.edu.cn/article/show/2246.aspx",
+    "count": 0
+  },
+  "http://software.hit.edu.cn/article/22/1.aspx": {
+    "date": "2015-02-27 11:31:02",
+    "link": "http://software.hit.edu.cn/article/show/2242.aspx",
+    "count": 0
+  },
+  "http://software.hit.edu.cn/article/60/1.aspx": {
+    "date": "2015-02-27 11:31:06",
+    "link": "http://software.hit.edu.cn/article/show/2248.aspx",
+    "count": 0
+  },
+  "http://software.hit.edu.cn/article/61/1.aspx": {
+    "date": "2015-02-27 11:31:09",
+    "link": "http://software.hit.edu.cn/article/show/2214.aspx",
+    "count": 0
+  },
+  "latest_tag_id": 2517,
+  "http://today.hit.edu.cn/depart/26_1_2.htm": {
+    "date": "2015-02-27 15:58:07",
+    "link": "http://today.hit.edu.cn/news/2014/12-23/9531529021RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/26_1_1.htm": {
+    "date": "2015-02-27 15:58:10",
+    "link": "http://today.hit.edu.cn/news/2015/02-27/8621132120RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/91_1_2.htm": {
+    "date": "2015-02-27 15:58:10",
+    "link": "http://today.hit.edu.cn/news/2012/11-05/5793339011RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/91_1_1.htm": {
+    "date": "2015-02-27 15:58:30",
+    "link": "http://today.hit.edu.cn/news/2012/03-14/4824941130RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/32_1_2.htm": {
+    "date": "2015-02-27 15:58:34",
+    "link": "http://today.hit.edu.cn/news/2014/12-30/5850206121RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/32_1_1.htm": {
+    "date": "2015-02-27 15:58:40",
+    "link": "http://today.hit.edu.cn/news/2015/01-10/7510819010RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/92_1_2.htm": {
+    "date": "2015-02-27 15:58:41",
+    "link": "http://today.hit.edu.cn/news/2014/12-31/9965939021RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/92_1_1.htm": {
+    "date": "2015-02-27 15:58:42",
+    "link": "http://today.hit.edu.cn/news/2014/09-09/1152009090RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/17_1_2.htm": {
+    "date": "2015-02-27 15:58:42",
+    "link": "http://today.hit.edu.cn/articles/2011/05-20/0509234525.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/17_1_1.htm": {
+    "date": "2015-02-27 15:58:43",
+    "link": "http://today.hit.edu.cn/news/2014/12-08/8204220121RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/28_1_2.htm": {
+    "date": "2015-02-27 15:58:45",
+    "link": "http://today.hit.edu.cn/news/2011/10-27/9650808001RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/28_1_1.htm": {
+    "date": "2015-02-27 15:58:46",
+    "link": "http://today.hit.edu.cn/news/2015/01-11/2372753110RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/108_1_2.htm": {
+    "date": "2015-02-27 15:58:46",
+    "link": "http://today.hit.edu.cn/news/2013/01-15/8624528010RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/108_1_1.htm": {
+    "date": "2015-02-27 15:58:47",
+    "link": "http://today.hit.edu.cn/articles/2010/07-23/0711433766.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/104_1_2.htm": {
+    "date": "2015-02-27 15:58:47",
+    "link": "http://today.hit.edu.cn/news/2012/06-15/6133841160RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/104_1_1.htm": {
+    "date": "2015-02-27 15:58:48",
+    "link": "http://today.hit.edu.cn/articles/2010/09-06/0915263811.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/34_1_2.htm": {
+    "date": "2015-02-27 15:58:48",
+    "link": "http://today.hit.edu.cn/news/2014/09-25/0944745190RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/34_1_1.htm": {
+    "date": "2015-02-27 15:58:51",
+    "link": "http://today.hit.edu.cn/news/2015/01-07/5454638010RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/106_1_2.htm": {
+    "date": "2015-02-27 15:58:52",
+    "link": "http://today.hit.edu.cn/articles/2010/06-09/061451447.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/106_1_1.htm": {
+    "date": "2015-02-27 15:58:52",
+    "link": "http://today.hit.edu.cn/articles/2010/03-26/031458177.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/74_1_2.htm": {
+    "date": "2015-02-27 15:58:54",
+    "link": "http://today.hit.edu.cn/news/2013/11-06/7400049011RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/74_1_1.htm": {
+    "date": "2015-02-27 15:58:55",
+    "link": "http://today.hit.edu.cn/news/2013/04-08/4534019040RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/57_1_2.htm": {
+    "date": "2015-02-27 15:58:56",
+    "link": "http://today.hit.edu.cn/articles/2007/07-18/07140616.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/57_1_1.htm": {
+    "date": "2015-02-27 15:58:58",
+    "link": "http://today.hit.edu.cn/news/2011/06-01/0611273320RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/107_1_2.htm": {
+    "date": "2015-02-27 15:58:59",
+    "link": null,
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/107_1_1.htm": {
+    "date": "2015-02-27 15:59:01",
+    "link": "http://today.hit.edu.cn/news/2014/12-17/5193529021RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/65_1_2.htm": {
+    "date": "2015-02-27 15:59:04",
+    "link": null,
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/65_1_1.htm": {
+    "date": "2015-02-27 15:59:05",
+    "link": null,
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/31_1_2.htm": {
+    "date": "2015-02-27 15:59:07",
+    "link": "http://today.hit.edu.cn/news/2014/12-31/8533835121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/31_1_1.htm": {
+    "date": "2015-02-27 15:59:09",
+    "link": "http://today.hit.edu.cn/news/2015/01-11/9523905110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/68_1_2.htm": {
+    "date": "2015-02-27 15:59:13",
+    "link": "http://today.hit.edu.cn/news/2014/12-11/870200221RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/68_1_1.htm": {
+    "date": "2015-02-27 15:59:15",
+    "link": "http://today.hit.edu.cn/news/2015/01-31/3734524110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/33_1_2.htm": {
+    "date": "2015-02-27 15:59:16",
+    "link": "http://today.hit.edu.cn/news/2011/09-23/2210231190RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/33_1_1.htm": {
+    "date": "2015-02-27 15:59:17",
+    "link": "http://today.hit.edu.cn/news/2014/11-17/1109014987RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/67_1_2.htm": {
+    "date": "2015-02-27 15:59:21",
+    "link": "http://today.hit.edu.cn/news/2012/09-29/2350459090RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/67_1_1.htm": {
+    "date": "2015-02-27 15:59:22",
+    "link": "http://today.hit.edu.cn/news/2015/01-26/7312114110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/27_1_2.htm": {
+    "date": "2015-02-27 15:59:23",
+    "link": "http://today.hit.edu.cn/articles/2010/12-09/1216373789.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/27_1_1.htm": {
+    "date": "2015-02-27 15:59:24",
+    "link": "http://today.hit.edu.cn/news/2015/01-08/5961219010RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/56_1_2.htm": {
+    "date": "2015-02-27 15:59:28",
+    "link": "http://today.hit.edu.cn/news/2015/02-06/9182735120RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/56_1_1.htm": {
+    "date": "2015-02-27 15:59:31",
+    "link": "http://today.hit.edu.cn/news/2015/02-14/8803231120RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/93_1_2.htm": {
+    "date": "2015-02-27 15:59:35",
+    "link": "http://today.hit.edu.cn/news/2013/09-04/9400230190RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/93_1_1.htm": {
+    "date": "2015-02-27 15:59:37",
+    "link": null,
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/38_1_2.htm": {
+    "date": "2015-02-27 15:59:41",
+    "link": "http://today.hit.edu.cn/articles/2009/11-09/1110002263.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/38_1_1.htm": {
+    "date": "2015-02-27 15:59:41",
+    "link": "http://today.hit.edu.cn/articles/2006/11-23/11151342.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/36_1_2.htm": {
+    "date": "2015-02-27 15:59:42",
+    "link": "http://today.hit.edu.cn/news/2014/03-21/3761011130RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/36_1_1.htm": {
+    "date": "2015-02-27 15:59:43",
+    "link": "http://today.hit.edu.cn/news/2014/12-16/143440121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/112_1_2.htm": {
+    "date": "2015-02-27 15:59:45",
+    "link": null,
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/112_1_1.htm": {
+    "date": "2015-02-27 15:59:46",
+    "link": "http://today.hit.edu.cn/news/2013/12-03/6453257121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/39_1_2.htm": {
+    "date": "2015-02-27 15:59:47",
+    "link": "http://today.hit.edu.cn/news/2015/01-05/2951730110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/39_1_1.htm": {
+    "date": "2015-02-27 15:59:47",
+    "link": "http://today.hit.edu.cn/news/2014/10-23/6523540101RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/42_1_2.htm": {
+    "date": "2015-02-27 15:59:48",
+    "link": "http://today.hit.edu.cn/articles/2005/04-20/04081333.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/42_1_1.htm": {
+    "date": "2015-02-27 15:59:49",
+    "link": null,
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/25_1_2.htm": {
+    "date": "2015-02-27 15:59:53",
+    "link": "http://today.hit.edu.cn/news/2014/04-28/2925045140RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/25_1_1.htm": {
+    "date": "2015-02-27 15:59:55",
+    "link": "http://today.hit.edu.cn/news/2015/02-17/4890530120RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/23_1_2.htm": {
+    "date": "2015-02-27 15:59:59",
+    "link": "http://today.hit.edu.cn/news/2012/10-24/1330116101RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/23_1_1.htm": {
+    "date": "2015-02-27 16:00:00",
+    "link": "http://today.hit.edu.cn/news/2015/01-11/524608110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/63_1_2.htm": {
+    "date": "2015-02-27 16:00:01",
+    "link": "http://today.hit.edu.cn/news/2014/09-16/3503301290RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/63_1_1.htm": {
+    "date": "2015-02-27 16:00:01",
+    "link": "http://today.hit.edu.cn/news/2014/05-11/4451708150RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/103_1_2.htm": {
+    "date": "2015-02-27 16:00:02",
+    "link": "http://today.hit.edu.cn/articles/2009/05-20/05085755.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/103_1_1.htm": {
+    "date": "2015-02-27 16:00:02",
+    "link": "http://today.hit.edu.cn/news/2014/11-17/931644111RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/110_1_2.htm": {
+    "date": "2015-02-27 16:00:03",
+    "link": null,
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/110_1_1.htm": {
+    "date": "2015-02-27 16:00:07",
+    "link": "http://today.hit.edu.cn/news/2015/02-04/3612217120RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/100_1_2.htm": {
+    "date": "2015-02-27 16:00:12",
+    "link": "http://today.hit.edu.cn/articles/2010/11-03/1109112996.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/100_1_1.htm": {
+    "date": "2015-02-27 16:00:21",
+    "link": "http://today.hit.edu.cn/news/2014/03-21/0572234130RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/88_1_2.htm": {
+    "date": "2015-02-27 16:00:25",
+    "link": null,
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/88_1_1.htm": {
+    "date": "2015-02-27 16:00:28",
+    "link": null,
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/40_1_2.htm": {
+    "date": "2015-02-27 16:00:31",
+    "link": "http://today.hit.edu.cn/news/2014/11-24/965320111RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/40_1_1.htm": {
+    "date": "2015-02-27 16:00:33",
+    "link": "http://today.hit.edu.cn/news/2015/01-08/4371944110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/58_1_2.htm": {
+    "date": "2015-02-27 16:00:36",
+    "link": "http://today.hit.edu.cn/news/2015/01-11/7340849010RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/58_1_1.htm": {
+    "date": "2015-02-27 16:00:39",
+    "link": "http://today.hit.edu.cn/news/2015/01-10/1534942110RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/89_1_2.htm": {
+    "date": "2015-02-27 16:00:40",
+    "link": "http://today.hit.edu.cn/news/2014/12-08/1903131121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/89_1_1.htm": {
+    "date": "2015-02-27 16:00:40",
+    "link": "http://today.hit.edu.cn/news/2014/12-16/5460020121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/21_1_2.htm": {
+    "date": "2015-02-27 16:00:41",
+    "link": "http://today.hit.edu.cn/news/2014/07-03/642303170RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/21_1_1.htm": {
+    "date": "2015-02-27 16:00:42",
+    "link": "http://today.hit.edu.cn/news/2015/01-28/465141110RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/29_1_2.htm": {
+    "date": "2015-02-27 16:00:43",
+    "link": "http://today.hit.edu.cn/news/2013/07-19/5713815170RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/29_1_1.htm": {
+    "date": "2015-02-27 16:00:43",
+    "link": "http://today.hit.edu.cn/news/2014/12-26/7452920121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/35_1_2.htm": {
+    "date": "2015-02-27 16:00:44",
+    "link": "http://today.hit.edu.cn/news/2014/09-09/4405210190RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/35_1_1.htm": {
+    "date": "2015-02-27 16:00:45",
+    "link": "http://today.hit.edu.cn/news/2014/11-14/8635224111RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/22_1_2.htm": {
+    "date": "2015-02-27 16:00:46",
+    "link": "http://today.hit.edu.cn/news/2015/01-12/4454222110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/22_1_1.htm": {
+    "date": "2015-02-27 16:00:46",
+    "link": "http://today.hit.edu.cn/news/2015/01-26/6500601210RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/30_1_2.htm": {
+    "date": "2015-02-27 16:00:49",
+    "link": "http://today.hit.edu.cn/news/2015/02-05/4465344120RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/30_1_1.htm": {
+    "date": "2015-02-27 16:00:50",
+    "link": "http://today.hit.edu.cn/news/2015/01-11/9380639010RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/64_1_2.htm": {
+    "date": "2015-02-27 16:00:54",
+    "link": "http://today.hit.edu.cn/news/2015/01-08/8255825110RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/64_1_1.htm": {
+    "date": "2015-02-27 16:00:55",
+    "link": "http://today.hit.edu.cn/articles/2010/03-01/0314381415.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/105_1_2.htm": {
+    "date": "2015-02-27 16:00:57",
+    "link": "http://today.hit.edu.cn/articles/2010/07-09/07161326100.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/105_1_1.htm": {
+    "date": "2015-02-27 16:00:58",
+    "link": "http://today.hit.edu.cn/articles/2010/12-26/1216380673.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/83_1_2.htm": {
+    "date": "2015-02-27 16:01:01",
+    "link": "http://today.hit.edu.cn/news/2014/06-06/7921344160RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/83_1_1.htm": {
+    "date": "2015-02-27 16:01:01",
+    "link": "http://today.hit.edu.cn/news/2014/12-01/1470301021RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/95_1_2.htm": {
+    "date": "2015-02-27 16:01:02",
+    "link": null,
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/95_1_1.htm": {
+    "date": "2015-02-27 16:01:03",
+    "link": "http://today.hit.edu.cn/news/2014/12-15/8685900121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/20_1_2.htm": {
+    "date": "2015-02-27 16:01:04",
+    "link": "http://today.hit.edu.cn/news/2014/10-15/2520246101RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/20_1_1.htm": {
+    "date": "2015-02-27 16:01:07",
+    "link": "http://today.hit.edu.cn/news/2015/02-26/183428120RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/75_1_2.htm": {
+    "date": "2015-02-27 16:01:10",
+    "link": "http://today.hit.edu.cn/news/2015/01-13/2641855110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/75_1_1.htm": {
+    "date": "2015-02-27 16:01:13",
+    "link": "http://today.hit.edu.cn/news/2013/05-23/2842520150RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/54_1_2.htm": {
+    "date": "2015-02-27 16:01:16",
+    "link": "http://today.hit.edu.cn/articles/2010/03-14/0319345145.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/54_1_1.htm": {
+    "date": "2015-02-27 16:01:19",
+    "link": "http://today.hit.edu.cn/articles/2009/03-18/03144619.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/80_1_2.htm": {
+    "date": "2015-02-27 16:01:22",
+    "link": "http://today.hit.edu.cn/news/2014/09-30/1651737190RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/80_1_1.htm": {
+    "date": "2015-02-27 16:01:23",
+    "link": "http://today.hit.edu.cn/news/2015/01-17/8293632110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/82_1_2.htm": {
+    "date": "2015-02-27 16:01:24",
+    "link": "http://today.hit.edu.cn/news/2015/02-15/0320054120RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/82_1_1.htm": {
+    "date": "2015-02-27 16:01:24",
+    "link": "http://today.hit.edu.cn/news/2012/03-09/5223629130RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/113_1_2.htm": {
+    "date": "2015-02-27 16:01:27",
+    "link": null,
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/113_1_1.htm": {
+    "date": "2015-02-27 16:01:28",
+    "link": null,
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/24_1_2.htm": {
+    "date": "2015-02-27 16:01:31",
+    "link": "http://today.hit.edu.cn/news/2014/09-17/385230190RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/24_1_1.htm": {
+    "date": "2015-02-27 16:01:31",
+    "link": "http://today.hit.edu.cn/news/2015/02-14/4704110120RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/6_1_2.htm": {
+    "date": "2015-02-27 16:01:34",
+    "link": "http://today.hit.edu.cn/news/2015/01-20/1481039110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/6_1_1.htm": {
+    "date": "2015-02-27 16:01:38",
+    "link": "http://today.hit.edu.cn/news/2015/02-25/8773712220RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/76_1_2.htm": {
+    "date": "2015-02-27 16:01:38",
+    "link": "http://today.hit.edu.cn/articles/2008/07-11/07090650.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/76_1_1.htm": {
+    "date": "2015-02-27 16:01:39",
+    "link": "http://today.hit.edu.cn/articles/2008/07-08/07154019.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/115_1_2.htm": {
+    "date": "2015-02-27 16:01:39",
+    "link": null,
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/115_1_1.htm": {
+    "date": "2015-02-27 16:01:39",
+    "link": null,
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/10_1_2.htm": {
+    "date": "2015-02-27 16:01:40",
+    "link": "http://today.hit.edu.cn/news/2015/01-22/9132510110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/10_1_1.htm": {
+    "date": "2015-02-27 16:01:41",
+    "link": "http://today.hit.edu.cn/news/2015/01-28/3942538010RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/85_1_2.htm": {
+    "date": "2015-02-27 16:01:42",
+    "link": "http://today.hit.edu.cn/news/2015/01-10/2165410110RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/85_1_1.htm": {
+    "date": "2015-02-27 16:01:42",
+    "link": "http://today.hit.edu.cn/news/2014/12-27/9940722221RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/86_1_2.htm": {
+    "date": "2015-02-27 16:01:43",
+    "link": "http://today.hit.edu.cn/news/2014/12-29/6304946121RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/86_1_1.htm": {
+    "date": "2015-02-27 16:01:45",
+    "link": "http://today.hit.edu.cn/news/2014/11-17/0164839011RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/90_1_2.htm": {
+    "date": "2015-02-27 16:01:45",
+    "link": "http://today.hit.edu.cn/news/2011/05-31/9502454150RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/90_1_1.htm": {
+    "date": "2015-02-27 16:01:45",
+    "link": "http://today.hit.edu.cn/articles/2010/03-16/0309462330.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/3_1_2.htm": {
+    "date": "2015-02-27 16:01:46",
+    "link": "http://today.hit.edu.cn/news/2015/01-07/7495430110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/3_1_1.htm": {
+    "date": "2015-02-27 16:01:47",
+    "link": "http://today.hit.edu.cn/news/2015/01-13/6920914110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/66_1_2.htm": {
+    "date": "2015-02-27 16:01:47",
+    "link": "http://today.hit.edu.cn/articles/2006/07-19/07104107.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/66_1_1.htm": {
+    "date": "2015-02-27 16:01:48",
+    "link": "http://today.hit.edu.cn/articles/2008/05-06/05165805.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/102_1_2.htm": {
+    "date": "2015-02-27 16:01:48",
+    "link": "http://today.hit.edu.cn/news/2015/01-29/9821854110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/102_1_1.htm": {
+    "date": "2015-02-27 16:01:49",
+    "link": "http://today.hit.edu.cn/news/2014/12-17/3533531121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/53_1_2.htm": {
+    "date": "2015-02-27 16:01:50",
+    "link": "http://today.hit.edu.cn/news/2015/01-22/4670242110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/53_1_1.htm": {
+    "date": "2015-02-27 16:01:51",
+    "link": "http://today.hit.edu.cn/news/2015/01-14/7722020110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/69_1_2.htm": {
+    "date": "2015-02-27 16:01:52",
+    "link": "http://today.hit.edu.cn/news/2015/01-11/6473915110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/69_1_1.htm": {
+    "date": "2015-02-27 16:01:52",
+    "link": "http://today.hit.edu.cn/news/2014/12-23/840439121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/84_1_2.htm": {
+    "date": "2015-02-27 16:01:52",
+    "link": "http://today.hit.edu.cn/news/2014/12-30/7254009021RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/84_1_1.htm": {
+    "date": "2015-02-27 16:01:53",
+    "link": "http://today.hit.edu.cn/news/2014/12-25/9752103121RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/4_1_2.htm": {
+    "date": "2015-02-27 16:01:54",
+    "link": "http://today.hit.edu.cn/news/2015/01-13/4195435110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/4_1_1.htm": {
+    "date": "2015-02-27 16:01:55",
+    "link": "http://today.hit.edu.cn/news/2015/02-02/7211413120RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/14_1_2.htm": {
+    "date": "2015-02-27 16:01:56",
+    "link": "http://today.hit.edu.cn/news/2015/02-26/4832334120RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/14_1_1.htm": {
+    "date": "2015-02-27 16:01:57",
+    "link": "http://today.hit.edu.cn/news/2015/02-01/8504318120RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/13_1_2.htm": {
+    "date": "2015-02-27 16:01:58",
+    "link": "http://today.hit.edu.cn/news/2015/02-11/9424103120RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/13_1_1.htm": {
+    "date": "2015-02-27 16:01:58",
+    "link": "http://today.hit.edu.cn/news/2015/01-09/7913025110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/19_1_2.htm": {
+    "date": "2015-02-27 16:01:59",
+    "link": "http://today.hit.edu.cn/news/2014/07-26/2124149070RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/19_1_1.htm": {
+    "date": "2015-02-27 16:02:00",
+    "link": "http://today.hit.edu.cn/news/2013/08-20/4824528080RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/11_1_2.htm": {
+    "date": "2015-02-27 16:02:01",
+    "link": "http://today.hit.edu.cn/news/2015/01-10/4563059010RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/11_1_1.htm": {
+    "date": "2015-02-27 16:02:02",
+    "link": "http://today.hit.edu.cn/news/2014/12-19/3164054121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/77_1_2.htm": {
+    "date": "2015-02-27 16:02:03",
+    "link": "http://today.hit.edu.cn/news/2015/02-26/5215923120RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/77_1_1.htm": {
+    "date": "2015-02-27 16:02:04",
+    "link": "http://today.hit.edu.cn/news/2014/10-31/8553928001RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/12_1_2.htm": {
+    "date": "2015-02-27 16:02:07",
+    "link": "http://today.hit.edu.cn/news/2015/02-18/8183530120RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/12_1_1.htm": {
+    "date": "2015-02-27 16:02:08",
+    "link": "http://today.hit.edu.cn/news/2014/12-30/0233309021RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/114_1_2.htm": {
+    "date": "2015-02-27 16:02:09",
+    "link": "http://today.hit.edu.cn/news/2014/12-30/723147121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/114_1_1.htm": {
+    "date": "2015-02-27 16:02:12",
+    "link": "http://today.hit.edu.cn/news/2014/09-19/2170816190RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/87_1_2.htm": {
+    "date": "2015-02-27 16:02:13",
+    "link": "http://today.hit.edu.cn/news/2012/07-20/230645170RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/87_1_1.htm": {
+    "date": "2015-02-27 16:02:14",
+    "link": "http://today.hit.edu.cn/news/2012/06-10/6795636160RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/8_1_2.htm": {
+    "date": "2015-02-27 16:02:15",
+    "link": "http://today.hit.edu.cn/news/2014/12-25/933626121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/8_1_1.htm": {
+    "date": "2015-02-27 16:02:16",
+    "link": "http://today.hit.edu.cn/news/2015/01-17/6254700210RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/55_1_2.htm": {
+    "date": "2015-02-27 16:02:16",
+    "link": "http://today.hit.edu.cn/news/2014/12-19/2871554121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/55_1_1.htm": {
+    "date": "2015-02-27 16:02:17",
+    "link": "http://today.hit.edu.cn/news/2014/12-25/9973000121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/5_1_2.htm": {
+    "date": "2015-02-27 16:02:17",
+    "link": "http://today.hit.edu.cn/news/2014/12-22/0634230221RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/5_1_1.htm": {
+    "date": "2015-02-27 16:02:18",
+    "link": "http://today.hit.edu.cn/news/2014/12-26/843156121RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/109_1_2.htm": {
+    "date": "2015-02-27 16:02:19",
+    "link": "http://today.hit.edu.cn/news/2015/01-08/6963202110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/109_1_1.htm": {
+    "date": "2015-02-27 16:02:19",
+    "link": "http://today.hit.edu.cn/news/2014/12-16/0795954121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/37_1_2.htm": {
+    "date": "2015-02-27 16:02:19",
+    "link": "http://today.hit.edu.cn/news/2015/01-13/0102117110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/37_1_1.htm": {
+    "date": "2015-02-27 16:02:20",
+    "link": "http://today.hit.edu.cn/news/2014/11-11/602254111RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/9_1_2.htm": {
+    "date": "2015-02-27 16:02:21",
+    "link": "http://today.hit.edu.cn/news/2015/02-18/643140120RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/9_1_1.htm": {
+    "date": "2015-02-27 16:02:22",
+    "link": "http://today.hit.edu.cn/news/2015/01-16/4661942110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/62_1_2.htm": {
+    "date": "2015-02-27 16:02:22",
+    "link": "http://today.hit.edu.cn/news/2015/01-22/9611759010RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/62_1_1.htm": {
+    "date": "2015-02-27 16:02:23",
+    "link": "http://today.hit.edu.cn/news/2011/09-30/3164116190RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/7_1_2.htm": {
+    "date": "2015-02-27 16:02:24",
+    "link": "http://today.hit.edu.cn/news/2015/01-05/3151643210RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/7_1_1.htm": {
+    "date": "2015-02-27 16:02:24",
+    "link": "http://today.hit.edu.cn/news/2014/12-06/8883250121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/16_1_2.htm": {
+    "date": "2015-02-27 16:02:25",
+    "link": "http://today.hit.edu.cn/news/2014/11-27/243425111RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/16_1_1.htm": {
+    "date": "2015-02-27 16:02:25",
+    "link": "http://today.hit.edu.cn/news/2014/12-23/0944946121RL1.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/48_1_2.htm": {
+    "date": "2015-02-27 16:02:26",
+    "link": "http://today.hit.edu.cn/news/2015/01-24/2421126110RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/48_1_1.htm": {
+    "date": "2015-02-27 16:02:27",
+    "link": "http://today.hit.edu.cn/news/2014/12-23/551246121RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/60_1_2.htm": {
+    "date": "2015-02-27 16:02:28",
+    "link": "http://today.hit.edu.cn/news/2014/04-25/7491427140RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/60_1_1.htm": {
+    "date": "2015-02-27 16:02:28",
+    "link": "http://today.hit.edu.cn/news/2012/09-21/1645341190RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/70_1_2.htm": {
+    "date": "2015-02-27 16:02:31",
+    "link": "http://today.hit.edu.cn/news/2015/01-05/7690400210RL0.htm",
+    "count": 0
+  },
+  "http://today.hit.edu.cn/depart/70_1_1.htm": {
+    "date": "2015-02-27 16:02:34",
+    "link": "http://today.hit.edu.cn/news/2014/12-30/0994659121RL0.htm",
+    "count": 0
+  }
+}
