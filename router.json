@@ -2,42 +2,55 @@
 	"^http://today.hit.edu.cn/(news|articles)/\\d{4}/\\d{2}-\\d{2}/.*$": {
 		"content": ["//*[@id=\"pagecontent\"]//*[@id=\"text\"]", "//*[@id=\"articleText\"]"],
 		"tags": "//*[@id=\"date\"]/a",
-		"date": "//*[@id=\"date\"]/text()[1]"
+		"date": "//*[@id=\"date\"]/text()[1]",
+		"encoding": "gbk"
 	},
 	"^http://sme.hit.edu.cn/news/Show.asp\\?id=\\d+$": {
-		"content": "//*[@id=\"container\"]/table/tr/td[2]/table/tr[2]/td/table/tr[2]"
+		"content": "//*[@id=\"container\"]/table/tr/td[2]/table/tr[2]/td/table/tr[2]",
+		"encoding": "gbk"
 	},
 	"^http://cwc.hit.edu.cn/news/Show.asp\\?id=\\d+$": {
-		"content": "/html/body/table[4]/tr/td[1]/table[2]/tbody/tr/td/table/tr[2]/td"
+		"content": "/html/body/table[4]/tr/td[1]/table[2]/tbody/tr/td/table/tr[2]/td",
+		"encoding": "gbk"
 	},
 	"^http://jtxy.hit.edu.cn/news/Show.asp\\?id=\\d+$": {
-		"content": "//*[@id=\"container\"]/table/tr/td[2]/table/tr[2]/td/table/tr[2]"
+		"content": "//*[@id=\"container\"]/table/tr/td[2]/table/tr[2]/td/table/tr[2]",
+		"encoding": "gbk"
 	},
 	"^http://jwc.hit.edu.cn/news/Show(gg|xw).asp\\?id=\\d+$": {
-		"content": "/html/body/table[2]/tbody/tr/td[3]/table[2]/tr[3]"
+		"content": "/html/body/table[2]/tbody/tr/td[3]/table[2]/tr[3]",
+		"encoding": "gbk"
 	},
 	"^http://power.hit.edu.cn/news/Show(gg|xw).asp\\?id=\\d+$": {
-		"content": "/html/body/table[2]/tbody/tr/td[2]/table[2]/tr[3]"
+		"content": "/html/body/table[2]/tbody/tr/td[2]/table[2]/tr[3]",
+		"encoding": "gbk"
 	},
 	"^http://sa.hit.edu.cn/news/Show.asp\\?id=\\d+$": {
-		"content": "//*[@id=\"__01\"]/tr/td/table[2]/tr[2]/td"
+		"content": "//*[@id=\"__01\"]/tr/td/table[2]/tr[2]/td",
+		"encoding": "gbk"
 	},
 	"^http://rwxy.hit.edu.cn/news/Show.asp\\?id=\\d+$": {
-		"content": "/html/body/table/tr/td[2]/table/tr[3]/td/table/tr[2]/td/table/tr[2]"
+		"content": "/html/body/table/tr/td[2]/table/tr[3]/td/table/tr[2]/td/table/tr[2]",
+		"encoding": "gbk"
 	},
 	"^http://ssc.hit.edu.cn/news/Show(gg|xw|jz).asp\\?id=\\d+$": {
-		"content": "/html/body/table[3]/tbody/tr/td[2]/table[2]/tr[3]"
+		"content": "/html/body/table[3]/tbody/tr/td[2]/table[2]/tr[3]",
+		"encoding": "gbk"
 	},
 	"^http://chemeng.hit.edu.cn/news/Show(hd|jy|gg|xs).asp\\?id=\\d+$": {
-		"content": "/html/body/table[3]/tbody/tr/td[2]/table[2]/tr[3]"
+		"content": "/html/body/table[3]/tbody/tr/td[2]/table[2]/tr[3]",
+		"encoding": "gbk"
 	},
 	"^http://mse.hit.edu.cn/news/Show.asp\\?id=\\d+$": {
-		"content": "//*[@id=\"__01\"]/tr[2]/td/table/tr[2]/td"
+		"content": "//*[@id=\"__01\"]/tr[2]/td/table/tr[2]/td",
+		"encoding": "gbk"
 	},
 	"^http://cs.hit.edu.cn/\\?q=node/\\d+$": {
-		"content": "//*[@id=\"node-%@\"]/div[2]/div[1]/div/div"
+		"content": "//*[@id=\"node-%@\"]/div[2]/div[1]/div/div",
+		"encoding": "utf-8"
 	},
 	"^http://software.hit.edu.cn/article/show/\\d+.aspx$": {
-		"content": "/html/body/div/div[6]/div[1]"
+		"content": "/html/body/div/div[6]/div[1]",
+		"encoding": "utf-8"
 	}
 }
