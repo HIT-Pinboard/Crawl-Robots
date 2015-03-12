@@ -5,13 +5,8 @@ module PBRobot
 
   class Fetcher
 
-    def initialize(conf_filepath)
-      begin
-        @config = JSON.parse(open(conf_filepath).read)
-      rescue Errno::ENOENT
-        puts "[FATAL]: config file not found"
-        exit 1
-      end
+    def initialize(conf_filepath = '')
+      @config = PBRobot::Helper::json_with_filepath(conf_filepath)
     end
 
     def fetch(&block)
@@ -54,12 +49,7 @@ module PBRobot
 
       last_update_path = @config["last_update_path"]
       
-      begin
-        last_update = JSON.parse(open(last_update_path).read)
-      rescue Errno::ENOENT
-        puts '[INFO]: new last_update json created'
-        last_update = {}
-      end
+      last_update = PBRobot::Helper::json_with_filepath(@config["last_update_path"], :ignore_not_found => true)
 
       if !last_update.has_key?url
         last_update[url]= {}
@@ -138,10 +128,8 @@ module PBRobot
         "count" => stop_index
       }
 
-      File.open(last_update_path, 'w') { |file|
-        string = JSON.pretty_generate(last_update)
-        file.write(string)
-      }
+      PBRobot::Helper::write_to_json(last_update_path, last_update)
+
       latest_tag_id
     end
 

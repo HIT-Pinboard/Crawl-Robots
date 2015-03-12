@@ -23,6 +23,7 @@ module PBRobot
     end
 
     def iterativePreorder(node)
+      return if !node
       case node.name
       when "text"
         @string += node.text.strip if node.text.strip.length != 0

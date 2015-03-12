@@ -6,12 +6,7 @@ module PBRobot
   class Router
 
     def initialize(conf_filepath = './router.json')
-      begin
-        @conf = JSON.parse(open(conf_filepath).read)
-      rescue Errno::ENOENT
-        puts "[FATAL]: router config file not found"
-        exit 1
-      end
+      @conf = PBRobot::Helper::json_with_filepath(conf_filepath)
     end
 
     def page=(page)
