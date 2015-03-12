@@ -12,8 +12,9 @@ require 'time'
 begin
 	require 'mail'
 rescue LoadError
-	DO_NOT_SENDMAIL = 1
+	SENDMAIL = 0
 else
+	SENDMAIL = 1
 	MAIL_FROM = ''
 	MAIL_TO = ''
 end
@@ -32,12 +33,12 @@ def invoke_fetcher(&block)
 	begin
 		fetcher = block.call
 		if fetcher.is_a?(PBRobot::Fetcher) && 
-			rs = fetcher.fetch { |obj, base| PBNewsObject.new(obj, base).save(conn) }
+			rs = fetcher.fetch { |obj, base| PBNewsObject.new(obj, base).save(@conn) }
 			@latest_tag_id = rs
 		end
 	rescue Exception => e
 		puts "[ERROR]: #{fetcher.class} crashed at #{e.backtrace}"
-		if !DO_NOT_SENDMAIL
+		if SENDMAIL
 			err_msg = "#{e.inspect}\n\n#{e.backtrace}"
 			Mail.deliver do 
 				from		MAIL_FROM
@@ -55,7 +56,7 @@ while true
 
 		@latest_tag_id = nil
 
-		conn = PBDBConn.new
+		@conn = PBDBConn.new
 
 		config_array.each do |conf|
 			invoke_fetcher { PBGeneralFetcher.new(conf) }
@@ -69,7 +70,7 @@ while true
 
 		invoke_fetcher { TodayFetcher.new("./today.hit.edu.cn.json") }
 
-		conn.close
+		@conn.close
 
 		pushController = PBPushController.new
 		pushController.check_update(@latest_tag_id)
