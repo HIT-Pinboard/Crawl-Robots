@@ -2,22 +2,20 @@ require 'mysql'
 require 'open-uri'
 require 'houston'
 require 'json'
+require 'PBRobot'
 require './PBTAO.rb'
 require './PBDBConnector.rb'
 
 class PBPushController
 
-	def initialize(conf_filepath = './last_update.json')
-		@conf_filepath = conf_filepath
-		if File.exist?(conf_filepath) && File.exist?("./certs.json")
-			@last_update = JSON.parse(open(conf_filepath).read)
-			@tao = PBTAO.new
-			@conn = PBDBConn.new
-			@apn = Houston::Client.development
-			@certs = JSON.parse(File.read("./certs.json"))
-		else
-			raise "[FATAL]: config file not found"
-		end
+	def initialize(last_update_filepath = './last_update.json', certs_filepath = './certs.json', options = {})
+		@last_update_filepath = last_update_filepath
+
+		@last_update = PBRobot::Helper::json_with_filepath(last_update_filepath)
+		@certs = PBRobot::Helper::json_with_filepath(certs_filepath)
+		@tao = PBTAO.new
+		@conn = PBDBConn.new
+		@apn = options[:debug] ? Houston::Client.development : Houston::Client.production
 	end
 
 	def push(uuid, badge, string)
@@ -70,13 +68,9 @@ class PBPushController
 
 		end
 		@conn.close
-
 		
 		@last_update['latest_tag_id'] = latest_tag_id
-		File.open(@conf_filepath, 'w') { |file|
-			string = JSON.pretty_generate(@last_update)
-			file.write(string)
-		}
+		PBRobot::Helper::write_to_json(@last_update_filepath, @last_update)
 		
 	end
 
