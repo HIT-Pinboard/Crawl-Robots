@@ -1,16 +1,12 @@
+require 'PBRobot'
 require 'mysql'
 require 'json'
 require 'open-uri'
 
 class PBDBConn
 
-	def initialize(conf_filepath = './db.json')
-		begin
-			@conf = JSON.parse(open(conf_filepath).read)
-		rescue Errno::ENOENT
-			puts "[FATAL]: db config file not found"
-      exit 1
-		end
+	def initialize(filepath = './db.json')
+    @conf = PBRobot::Helper::json_with_filepath(filepath)
 		raise "[FATAL]: db config file incorrect" if !check_config(@conf)
 		@conn = Mysql.new(@conf["db_address"], @conf["db_username"], @conf["db_password"], @conf["db_database"])
 	end

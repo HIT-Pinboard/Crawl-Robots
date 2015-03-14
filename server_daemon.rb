@@ -7,6 +7,7 @@ require './PBTAO.rb'
 
 set :port, 8080
 set :environment, :production
+set :server, 'webrick'
 
 get '/' do
 	redirect '/index.html'
@@ -30,7 +31,7 @@ post '/newsList' do
 	data = payload["data"]
 	start_index =  data["start_index"].to_i
 	count = data["count"].to_i
-	if data.has_key?("tags")
+	if data.has_key?("tags") && data["tags"].count > 0
 		tags = data["tags"]
 		conn = PBDBConn.new
 		if tags.first == "0"
