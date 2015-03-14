@@ -5,8 +5,8 @@ module PBRobot
 
   class Router
 
-    def initialize(conf_filepath = './router.json')
-      @conf = PBRobot::Helper::json_with_filepath(conf_filepath)
+    def initialize(filepath = './router.json')
+      @conf = PBRobot::Helper::json_with_filepath(filepath)
     end
 
     def page=(page)

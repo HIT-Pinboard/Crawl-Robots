@@ -5,8 +5,8 @@ module PBRobot
 
   class Fetcher
 
-    def initialize(conf_filepath = '')
-      @config = PBRobot::Helper::json_with_filepath(conf_filepath)
+    def initialize(filepath = '')
+      @config = PBRobot::Helper::json_with_filepath(filepath)
     end
 
     def fetch(&block)
@@ -56,6 +56,8 @@ module PBRobot
         puts "[INFO]: new last_update json section #{url} created"
       end
 
+      decision = get_decision_maker(last_update[url])
+
       latest_tag_id = nil
 
       while !should_stop do
@@ -73,7 +75,7 @@ module PBRobot
             stop_link = news_link
           end
 
-          if last_update[url]["link"] != nil && news_link == last_update[url]["link"]
+          if decision.should_stop_at(news_link)
             should_stop = 1
             break
           end
@@ -137,11 +139,15 @@ module PBRobot
       hash.has_key?("encoding") && hash.has_key?("news_table") && hash.has_key?("next_text")
     end
 
-    def get_extractor(conf_hash)
-      PBRobot::Extractor.new(conf_hash)
+    def get_extractor(hash)
+      PBRobot::Extractor.new(hash)
     end
 
-    private :fetch_core ,:check_config, :get_extractor
+    def get_decision_maker(hash)
+      PBRobot::DecisionMaker.new(hash)
+    end
+
+    private :fetch_core ,:check_config, :get_extractor, :get_decision_maker
 
   end
 

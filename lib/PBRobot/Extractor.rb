@@ -2,8 +2,8 @@ module PBRobot
 
   class Extractor
 
-    def initialize(conf_hash)
-      @conf_hash = conf_hash
+    def initialize(hash)
+      @conf_hash = hash
       @base_url = ''
     end
 
