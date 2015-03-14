@@ -17,10 +17,7 @@ module PBRobot
         end
       rescue JSON::ParserError
         puts "[FATAL]: parse json failed"
-        exit 1
-      rescue Exception => e
-        puts "[FATAL]: #{e.inspect}" 
-        exit 1   
+        exit 1  
       end
     end
 
@@ -29,7 +26,7 @@ module PBRobot
         File.open(filepath, 'w') { |file|
           file.write(JSON.pretty_generate(hash))
         }
-      rescue Exception => e
+      rescue IOError => e
         puts "[ERROR]: write to file failed with #{e.inspect}"
       end
     end
