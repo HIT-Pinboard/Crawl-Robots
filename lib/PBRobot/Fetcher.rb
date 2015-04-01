@@ -45,7 +45,7 @@ module PBRobot
       # Incrementally Update
       should_stop = false
       stop_index = 0
-      stop_link = nil
+      stop_link = nil,nil,nil
 
       last_update_path = @config["last_update_path"]
       
@@ -71,8 +71,16 @@ module PBRobot
 
           news_link = extractor.link
 
-          if stop_link == nil
-            stop_link = news_link
+          if stop_link[0] == nil
+            stop_link[0] = news_link
+          end
+
+          if stop_link[0] != nil and stop_link[1] == nil
+            stop_link[1] = news_link
+          end
+
+	  if stop_link[0] != nil and stop_link[1] != nil and stop_link[2] == nil
+            stop_link[2] = news_link
           end
 
           if decision.should_stop_at(news_link)
