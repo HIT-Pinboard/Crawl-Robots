@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Pinboard API</title>
+		<link rel="stylesheet" href="sticky-footer.css" type="text/css">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<p class="navbar-text">工大头条 - HIT Pinboard</p>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<div class="page-header">
+				<h1>REST API Introduce<br /><small>feel free to use and contribute!</small></h1>
+			</div>
+			<div class="block">
+				<h3>GET /tagsList</h3>
+				<p class="text-info">get all tags</p>
+				<table class="table table-hover">
+					<tr>
+						<td class="col-sm-3"><b>Parameter</b></td>
+						<td class="col-sm-3"><b>Type</b></td>
+						<td class="col-sm-3"><b>Usage</b></td>
+						<td class="col-sm-3"><b>Optional</b></td>
+					</tr>
+					<tr>
+						<td><em>none</em></td>
+						<td><em>none</em></td>
+						<td><em>none</em></td>
+						<td><em>none</em></td>
+					</tr>
+				</table>
+				<p class="text-muted">Response format: JSON</p>
+				<h3>Response Example:</h3>
+				<code>
+				{
+					"status": 200,
+					"response": [{
+						"name": "Department",
+						"value": "1",
+						"children": [
+							{
+								"name" : "Department - Category",
+								"value" : "1.1",
+								"children" : []
+							},
+							{
+								"name" : "Department - Category",
+								"value" : "1.2",
+								"children" : []
+							}]
+					}]
+				}
+				</code>
+			</div>
+			<div class="block">
+				<h3>POST /newsList</h3>
+				<p class="text-info">get featured/subscribed news list</p>
+				<table class="table table-hover">
+					<tr>
+						<td class="col-sm-3"><b>Parameter</b></td>
+						<td class="col-sm-3"><b>Type</b></td>
+						<td class="col-sm-3"><b>Usage</b></td>
+						<td class="col-sm-3"><b>Optional</b></td>
+					</tr>
+					<tr>
+						<td>tags</td>
+						<td>Array</td>
+						<td>tags array containing user's subscription, if only contains <b>"0"</b>, return featured news list</td>
+						<td>YES</td>
+					</tr>
+					<tr>
+						<td>start_index</td>
+						<td>String or Integer</td>
+						<td>start from which news</td>
+						<td>NO</td>
+					</tr>
+					<tr>
+						<td>count</td>
+						<td>String or Integer</td>
+						<td>return maximum numbers of news</td>
+						<td>NO</td>
+					</tr>
+				</table>
+				<p class="text-muted">Response format: JSON</p>
+				<h3>Response Example:</h3>
+				<code>
+				{
+					"status": 200,
+					"response": [
+						{
+							"title": "News Title",
+							"link": "News FilePath",
+							"tags": ["1.1", "1.2"],
+							"date": "2014-10-20 10:00:00"
+						},
+						{
+							"title": "News Title",
+							"link": "News FilePath",
+							"tags": ["1.2"],
+							"date": "2014-10-10 10:00:00"
+						}
+					]
+				}
+				</code>
+			</div>
+			<div class="block">
+				<h3>GET /*/*.json</h3>
+				<p class="text-info">get specific news</p>
+				<table class="table table-hover">
+					<tr>
+						<td class="col-sm-3"><b>Parameter</b></td>
+						<td class="col-sm-3"><b>Type</b></td>
+						<td class="col-sm-3"><b>Usage</b></td>
+						<td class="col-sm-3"><b>Optional</b></td>
+					</tr>
+					<tr>
+						<td><em>none</em></td>
+						<td><em>none</em></td>
+						<td><em>none</em></td>
+						<td><em>none</em></td>
+					</tr>
+				</table>
+				<p class="text-muted">Response format: JSON</p>
+				<h3>Response Example:</h3>
+				<code>
+				{
+					"status": 200,
+					"response": {
+						"title": "News Title",
+						"link": "News URL",
+						"date": "2014-10-20 10:00:00",
+						"imgs": [
+							"Image URL", "Image URL"
+						],
+						"tags": [
+							"1.1", "1.2"
+						]
+					}
+				}
+				</code>
+			</div>
+			<div class="block">
+				<h3>POST /push</h3>
+				<p class="text-info">configure push notification</p>
+				<table class="table table-hover">
+					<tr>
+						<td class="col-sm-3"><b>Parameter</b></td>
+						<td class="col-sm-3"><b>Type</b></td>
+						<td class="col-sm-3"><b>Usage</b></td>
+						<td class="col-sm-3"><b>Optional</b></td>
+					</tr>
+					<tr>
+						<td>token</td>
+						<td>String</td>
+						<td>device UUID</td>
+						<td>YES</td>
+					</tr>
+					<tr>
+						<td>action</td>
+						<td>String</td>
+						<td><b>"register"</b> represent register or update a user's subscription for push notifications, <b>"remove"</b> represent remove this user from push notifications</td>
+						<td>YES</td>
+					</tr>
+					<tr>
+						<td>tags</td>
+						<td>Array</td>
+						<td>tags array containing user's subscription</td>
+						<td>NO</td>
+					</tr>
+				</table>
+				<p class="text-muted">Response format: JSON</p>
+				<h3>Response Example:</h3>
+				<code>
+				{
+					"status": 200
+				}
+				</code>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+		        <p class="text-muted">Made with ♥︎ by <a href="https://github.com/AustinChou">AustinChou</a></p>
+		    </div>
+		</footer>
+	</body>
+				
