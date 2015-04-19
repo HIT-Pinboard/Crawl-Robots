@@ -24,6 +24,7 @@ module PBRobot
 
     def fetch_core(base, url, &block)
       conf_hash = @config[url]
+      max_fetch_objects = @config["max_fetch_objects"]
       raise "[FATAL]: config file incorrect" if !check_config(conf_hash)
 
       main_thread = Mechanize.new
@@ -64,6 +65,8 @@ module PBRobot
         table = news_index.search(conf_hash["news_table"])
 
         table.each do |cell|
+
+          break if max_fetch_objects && stop_index > max_fetch_objects
           
           extractor = get_extractor(conf_hash)
           extractor.base_url=base_url
