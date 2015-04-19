@@ -13,11 +13,11 @@ class PBDBConn
 
 	def save(hash)
 		latest_tag_id = nil
-		sql = "INSERT INTO `NewsObject` (`Title`,`Date`,`Filepath`,`Link`) VALUES (?,?,?,?)"
+		sql = "INSERT IGNORE INTO `NewsObject` (`Title`,`Date`,`Filepath`,`Link`) VALUES (?,?,?,?)"
 		st = @conn.prepare(sql)
 		st.execute(hash["title"], hash["date"], hash["filepath"], hash["link"])
 		insert_id = st.insert_id
-		hash["tags"].uniq.each do |tag|
+		insert_id > 0 && hash["tags"].uniq.each do |tag|
 			sql = "INSERT INTO `Object_Tags` (`ID_News`,`Tag_Value`) VALUES (?,?)"
 			st = @conn.prepare(sql)
 			st.execute(insert_id, tag)

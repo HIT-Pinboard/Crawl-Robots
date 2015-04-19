@@ -1552,5 +1552,6 @@
     "next_text": "下 页"
   },
   "base_url": "http://today.hit.edu.cn",
-  "last_update_path": "./last_update.json"
+  "last_update_path": "./last_update.json",
+  "max_fetch_objects": 10
 }
